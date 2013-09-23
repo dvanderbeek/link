@@ -1,9 +1,9 @@
 Linkcapital::Application.routes.draw do
-  get "students", to: 'home#students', as: 'students'
-  get "investors", to: 'home#investors', as: 'investors'
-  get "organizations", to: 'home#organizations', as: 'organizations'
-  get "apply", to: 'home#apply', as: 'apply'
-  get "contact", to: 'messages#new', as: 'contact'
+  get :students, to: 'home#students', as: :students
+  get :investors, to: 'home#investors', as: :investors
+  get :organizations, to: 'home#organizations', as: :organizations
+  get :apply, to: 'home#apply', as: :apply
+  get :contact, to: 'messages#new', as: :contact
   resources :messages, only: [:new, :create]
   root to: "home#index"
 
