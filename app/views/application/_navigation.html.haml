@@ -10,22 +10,9 @@
       = link_to "Link Capital", root_url, class: "navbar-brand"
     / Collect the nav links, forms, and other content for toggling
     .collapse.navbar-collapse.navbar-ex1-collapse
-      %ul.nav.navbar-nav
-        = nav_link "Home", root_url, "home", "index"
-        = nav_link "About", about_url, "home", "about"
-        = nav_link "Contact", contact_url, "messages", "new"
-      / %ul.nav.navbar-nav.navbar-right
-      /   %li.dropdown
-      /     %a.dropdown-toggle{"data-toggle" => "dropdown", href: "#"}
-      /       Dropdown
-      /       %b.caret
-      /     %ul.dropdown-menu
-      /       %li
-      /         %a{href: "#"} Action
-      /       %li
-      /         %a{href: "#"} Another action
-      /       %li
-      /         %a{href: "#"} Something else here
-      /       %li
-      /         %a{href: "#"} Separated link
+      %button.btn.btn-primary.navbar-btn.pull-right{style: "margin-right: -15px;"} Apply Now
+      %ul.nav.navbar-nav.navbar-right{style: "margin-right: 20px;"}
+        = nav_link "For Student Loans", students_url, "home", "students"
+        = nav_link "For Investors", investors_url, "home", "investors"
+        = nav_link "Contact Us", contact_url, "messages", "new"
     / /.navbar-collapse

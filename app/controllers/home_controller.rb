@@ -2,9 +2,9 @@ class HomeController < ApplicationController
   def index
   end
 
-  def about
+  def students
   end
 
-  def contact
+  def investors
   end
 end
