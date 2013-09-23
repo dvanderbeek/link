@@ -9,12 +9,11 @@
         %span.icon-bar
       = link_to "Link Capital", root_url, class: "navbar-brand"
     / Collect the nav links, forms, and other content for toggling
-    .collapse.navbar-collapse.navbar-ex1-collapse
-      %form.navbar-form.navbar-right{style: "margin-right: -30px;"}
-        = link_to "Apply Now", apply_url, class: "btn btn-primary"
-      %ul.nav.navbar-nav.navbar-right{style: "margin-right: 0px;"}
-        = nav_link "For Student Loans", students_url, "home", "students"
-        = nav_link "For Investors", investors_url, "home", "investors"
-        = nav_link "For Organizations", organizations_url, "home", "organizations"
+    .collapse.navbar-collapse
+      %ul.nav.navbar-nav.navbar-right
+        = nav_link "Students", students_url, "home", "students"
+        = nav_link "Investors", investors_url, "home", "investors"
+        = nav_link "Organizations", organizations_url, "home", "organizations"
         = nav_link "Contact Us", contact_url, "messages", "new"
+        %li= link_to "Apply Now", apply_url, class: "btn btn-primary navbar-btn", id: "apply-btn"
     / /.navbar-collapse

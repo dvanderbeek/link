@@ -4,3 +4,12 @@
 .navbar {
   margin-bottom: 0!important;
 }
+
+#apply-btn {
+  color: #ffffff; 
+  padding: 6px 12px; 
+  margin-left: 15px;
+  &:hover {
+    background: darken(#428BCA, 5%);
+  }
+}
