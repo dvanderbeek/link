@@ -1,18 +1,25 @@
 = form_for @message, remote: true, html: { role: "form" } do |f|
   .form-group{class: ("has-error" if @message.errors.messages[:name].present?)}
-    = f.label :name, class: "control-label"
+    = f.label :name, raw("<abbr title='required'>*</abbr> Name"), class: "control-label"
     = f.text_field :name, class: "form-control"
     - if @message.errors.messages[:name].present?
       %p.help-block= @message.errors.messages[:name][0]
-  .form-group{class: ("has-error" if @message.errors.messages[:email].present?)}
-    = f.label :email, class: "control-label"
-    = f.text_field :email, class: "form-control"
-    - if @message.errors.messages[:email].present?
-      %p.help-block= @message.errors.messages[:email][0]
+  .row
+    .col-md-6
+      .form-group{class: ("has-error" if @message.errors.messages[:email].present?)}
+        = f.label :email, raw("<abbr title='required'>*</abbr> Email"), class: "control-label"
+        = f.text_field :email, class: "form-control"
+        - if @message.errors.messages[:email].present?
+          %p.help-block= @message.errors.messages[:email][0]
+    .col-md-6
+      .form-group{class: ("has-error" if @message.errors.messages[:phone].present?)}
+        = f.label :phone, class: "control-label"
+        = f.text_field :phone, class: "form-control"
+        - if @message.errors.messages[:phone].present?
+          %p.help-block= @message.errors.messages[:phone][0]
   .form-group{class: ("has-error" if @message.errors.messages[:content].present?)}
-    = f.label :content, "Message", class: "control-label"
+    = f.label :content, raw("<abbr title='required'>*</abbr> Message"), class: "control-label"
     = f.text_area :content, rows: 5, class: "form-control"
     - if @message.errors.messages[:content].present?
       %p.help-block= @message.errors.messages[:content][0]
-  .actions
-    = f.submit "Send Message", class: "btn btn-primary"
+  = f.submit "Send Message", class: "btn btn-default"

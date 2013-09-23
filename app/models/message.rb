@@ -3,6 +3,7 @@ class Message
   
   attribute :name
   attribute :email
+  attribute :phone
   attribute :content
   attribute :priority # type: Integer, default: 0
   
