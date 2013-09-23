@@ -11,7 +11,7 @@
     / Collect the nav links, forms, and other content for toggling
     .collapse.navbar-collapse.navbar-ex1-collapse
       %form.navbar-form.navbar-right{style: "margin-right: -30px;"}
-        = link_to "Apply Now", "#", class: "btn btn-primary"
+        = link_to "Apply Now", apply_url, class: "btn btn-primary"
       %ul.nav.navbar-nav.navbar-right{style: "margin-right: 0px;"}
         = nav_link "For Student Loans", students_url, "home", "students"
         = nav_link "For Investors", investors_url, "home", "investors"

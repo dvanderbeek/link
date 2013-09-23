@@ -7,4 +7,7 @@ class HomeController < ApplicationController
 
   def investors
   end
+
+  def apply
+  end
 end
