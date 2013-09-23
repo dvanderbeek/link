@@ -1,5 +1,6 @@
 Linkcapital::Application.routes.draw do
   get "about", to: 'home#about', as: 'about'
+  get "contact", to: 'home#contact', as: 'contact'
   root to: "home#index"
 
   # The priority is based upon order of creation:
