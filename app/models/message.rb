@@ -1,6 +1,5 @@
 class Message
   include ActiveAttr::Model
-  include ActiveAttr::MassAssignment
   
   attribute :name
   attribute :email
