@@ -26,6 +26,7 @@ gem 'haml-rails'
 gem 'bootstrap-sass', github: 'thomas-mcdonald/bootstrap-sass'
 gem 'newrelic_rpm'
 gem 'active_attr'
+gem "letter_opener", :group => :development
 
 
 # To use ActiveModel has_secure_password

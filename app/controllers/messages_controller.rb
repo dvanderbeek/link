@@ -8,7 +8,7 @@ class MessagesController < ApplicationController
 
     respond_to do |format|
       if @message.valid?
-        # TODO send message here
+        MessageMailer.new_message(@message).deliver
         format.html { redirect_to root_url, notice: "Message sent! Thank you for contacting us." }
         format.js
       else
