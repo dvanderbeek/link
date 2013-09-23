@@ -8,6 +8,9 @@ class HomeController < ApplicationController
   def investors
   end
 
+  def organizations
+  end
+
   def apply
   end
 end
