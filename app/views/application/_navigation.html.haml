@@ -1,6 +1,5 @@
 %nav.navbar.navbar-default{role: "navigation"}
   .container
-    / Brand and toggle get grouped for better mobile display
     .navbar-header
       %button.navbar-toggle{"data-target" => ".navbar-ex1-collapse", "data-toggle" => "collapse", type: "button"}
         %span.sr-only Toggle navigation
@@ -8,7 +7,6 @@
         %span.icon-bar
         %span.icon-bar
       = link_to "Link Capital", root_url, class: "navbar-brand"
-    / Collect the nav links, forms, and other content for toggling
     .collapse.navbar-collapse.navbar-ex1-collapse
       %ul.nav.navbar-nav.navbar-right
         = nav_link "Students", students_url, "home", "students"
@@ -16,4 +14,3 @@
         = nav_link "Organizations", organizations_url, "home", "organizations"
         = nav_link "Contact Us", contact_url, "messages", "new"
         %li{style: "margin: 0 10px;"}= link_to "Apply Now", apply_url, class: "btn btn-primary navbar-btn", id: "apply-btn"
-    / /.navbar-collapse
