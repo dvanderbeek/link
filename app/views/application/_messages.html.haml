@@ -1,2 +1,4 @@
-.container
-  Flash
+- flash.each do |type, value|
+  .flash.alert{ :class => (type.to_s == "notice" ? "alert-success" : "alert-error") }
+    .container
+      = value 

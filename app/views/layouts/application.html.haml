@@ -7,5 +7,5 @@
     = csrf_meta_tags
   %body
     = render "navigation"
-    = render "messages"
+    = render partial: "messages", locals: { flash: flash }
     = yield

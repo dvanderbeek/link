@@ -1,0 +1,5 @@
+<% if @message.errors.any? %>
+  $("#form").html("<%= j render 'form' %>");
+<% else %>
+  $("#form").html("Message sent!");
+<% end %>

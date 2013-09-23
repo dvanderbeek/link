@@ -25,6 +25,7 @@ gem 'jquery-rails'
 gem 'haml-rails'
 gem 'bootstrap-sass', github: 'thomas-mcdonald/bootstrap-sass'
 gem 'newrelic_rpm'
+gem 'active_attr'
 
 
 # To use ActiveModel has_secure_password
