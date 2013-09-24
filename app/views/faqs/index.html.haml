@@ -3,6 +3,8 @@
     .col-md-12
       %h1 Frequently Asked Questions
 
-      = render @faqs
+      = text_field_tag :search_input, "", class: "form-control", placeholder: "Search FAQ's"
+      %ul#faqs
+        = render @faqs
 
       = link_to 'New FAQ', new_faq_path if params[:edit] == "true"
