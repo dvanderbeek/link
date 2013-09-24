@@ -5,4 +5,4 @@
 
       = render @faqs
 
-      = link_to 'New FAQ', new_faq_path
+      = link_to 'New FAQ', new_faq_path if params[:edit] == "true"

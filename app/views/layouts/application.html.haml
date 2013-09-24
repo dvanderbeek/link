@@ -14,3 +14,6 @@
     = render "navigation"
     = render partial: "messages", locals: { flash: flash }
     = yield
+    - unless params[:controller] == "faqs"
+      .container
+        = link_to "Frequently Asked Questions", faqs_url
