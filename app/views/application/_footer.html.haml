@@ -1,3 +1,21 @@
 #footer
   .container
-    %p= link_to "Frequently Asked Questions", faqs_url
+    .row
+      .col-xs-6
+        %p  
+          %strong We're passionate about giving back
+          %br/
+          That's why we donate 20% of our revenues to the colleges and universities where our loans are offered
+      .col-xs-3
+        %p
+          %strong= link_to "FAQ", faqs_url
+          %br/
+          Have a question? Discover how we've helped others
+      .col-xs-3
+        %p 
+          %strong Link Capital
+          %br/
+          = link_to "support@linkcapital.com", "mailto:support@linkcapital.com"
+          %br/
+          &copy; Copyright 
+          = Time.zone.now.year
