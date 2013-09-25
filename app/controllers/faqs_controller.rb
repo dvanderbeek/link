@@ -2,11 +2,12 @@ class FaqsController < ApplicationController
   # GET /faqs
   # GET /faqs.json
   def index
-    @faqs = Faq.all
+    @faqs = Faq.search(params[:search])
 
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @faqs }
+      format.js
     end
   end
 

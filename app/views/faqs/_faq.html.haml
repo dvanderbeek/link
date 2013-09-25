@@ -1,7 +1,0 @@
-%li
-  %b= faq.question
-  %p
-    = faq.answer
-    - if params[:edit] == "true"
-      = link_to "Edit", edit_faq_path(faq)
-      = link_to "Delete", faq, method: :delete, confirm: "Are you sure?"
