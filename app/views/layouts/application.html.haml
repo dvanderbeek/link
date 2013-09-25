@@ -11,10 +11,11 @@
     /[if lt IE 9]
       = javascript_include_tag "respond.min.js"
       = javascript_include_tag "html5shiv.js"
-  %body  
-    = render "navigation"
-    = render partial: "messages", locals: { flash: flash }
-    = yield
-    - unless params[:controller] == "faqs"
+  %body
+    #wrap
+      = render "navigation"
+      = render partial: "messages", locals: { flash: flash }
+      = yield
+    #footer
       .container
-        = link_to "Frequently Asked Questions", faqs_url
+        %p= link_to "Frequently Asked Questions", faqs_url
