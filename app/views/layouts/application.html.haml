@@ -11,9 +11,8 @@
       = javascript_include_tag "respond.min.js"
       = javascript_include_tag "html5shiv.js"
   %body
-    #wrap
-      = render "navigation"
-      = render partial: "messages", locals: { flash: flash }
-      #page
-        = yield
+    = render "navigation"
+    = render partial: "messages", locals: { flash: flash }
+    #page
+      = yield
     = render 'footer'
