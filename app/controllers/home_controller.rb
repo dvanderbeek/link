@@ -13,4 +13,7 @@ class HomeController < ApplicationController
 
   def apply
   end
+
+  def email_signature
+  end
 end
