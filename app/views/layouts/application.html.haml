@@ -15,7 +15,6 @@
     #wrap
       = render "navigation"
       = render partial: "messages", locals: { flash: flash }
-      = yield
-    #footer
-      .container
-        %p= link_to "Frequently Asked Questions", faqs_url
+      #page
+        = yield
+    = render 'footer'
