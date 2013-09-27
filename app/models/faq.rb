@@ -4,7 +4,7 @@ class Faq < ActiveRecord::Base
 
   include PgSearch
   pg_search_scope :search, against: [:question, :answer],
-    using: {tsearch: {dictionary: "simple"}} #use english for dictionary if we want to ignore stop words like "of" and "the" and allow stemming
+    using: {tsearch: {dictionary: "simple", prefix: true}} #use english for dictionary if we want to ignore stop words like "of" and "the" and allow stemming
 
   def self.text_search(query)
     if query.present?
