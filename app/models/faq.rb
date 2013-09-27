@@ -2,9 +2,13 @@ class Faq < ActiveRecord::Base
   attr_accessible :answer, :question
   validates :answer, :question, presence: true
 
-  def self.search(search)
-    if search
-      where('question LIKE ? OR answer LIKE ?', "%#{search}%", "%#{search}%")
+  include PgSearch
+  pg_search_scope :search, against: [:question, :answer],
+    using: {tsearch: {dictionary: "simple"}} #use english for dictionary if we want to ignore stop words like "of" and "the" and allow stemming
+
+  def self.text_search(query)
+    if query.present?
+      search(query)
     else
       scoped
     end
