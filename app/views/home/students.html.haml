@@ -2,3 +2,12 @@
   .row
     .col-md-12
       %h1 Students
+      %h3 Savings Calculator
+      .row.savings-calc-loan
+        .col-xs-4.balance
+          = text_field_tag :loan_balance, "", class: "form-control"
+        .col-xs-4.rate
+          = text_field_tag :loan_rate, "", class: "form-control"
+        .col-xs-4.term
+          = text_field_tag :loan_term, "", class: "form-control"
+      = link_to "Add Loan", "#", id: "savings-calculator-add-loan"

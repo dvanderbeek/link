@@ -1,9 +1,9 @@
 %ul.faqs
   - @faqs.each do |faq|
     %li
-      %b= faq.question
+      %b= highlight faq.question, params[:search]
       %p
-        = faq.answer
+        = highlight faq.answer, params[:search]
         - if params[:edit] == "true"
           = link_to "Edit", edit_faq_path(faq)
           = link_to "Delete", faq, method: :delete, confirm: "Are you sure?"
