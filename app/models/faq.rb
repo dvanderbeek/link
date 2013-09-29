@@ -7,7 +7,7 @@ class Faq < ActiveRecord::Base
     using: {tsearch: {dictionary: "simple", prefix: true}} #use english for dictionary if we want to ignore stop words like "of" and "the" and allow stemming
 
   def self.text_search(query)
-    if query.present?
+    if query.present? && query != ""
       search(query)
     else
       scoped

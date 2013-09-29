@@ -18,17 +18,42 @@ $apply-btn-bg: $brand-success;
 
 #page {
   padding-bottom: 30px;
-  min-height: 600px;
+  min-height: 550px;
+  background: #474749;
 }
 
 #footer {
-  background-color: #f5f5f5;
+  background-color: #242E2D;
+  color: #96A8AC;
   padding: 20px 0;
   p { 
     margin: 0; 
+  }
+  a, a:link, a:visited {
+    color: #96A8AC;
+    text-decoration: underline;
+  }
+  .media {
+    color: #C4C9CC;
+    strong {
+      color: #B9D038;
+    }
   }
 }
 
 .savings-calc-loan {
   margin-bottom: 10px;
+}
+
+#hero-title {
+  h2 {
+    color: #C0D806;
+    font-weight: 200;
+    margin: 50px 0 0 0;
+  }
+  h1 {
+    color: #ffffff;
+    font-weight: 300;
+    margin-top: 10px;
+  }
 }
