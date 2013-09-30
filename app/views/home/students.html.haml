@@ -9,11 +9,12 @@
           = link_to_add_fields "Add a Loan"
         .col-md-4
           = link_to "Calculate Your Savings", "#", class: "btn btn-success", id: "calculate-savings"
-  .row
+  .row#savings-results{style: "display: none;"}
     .col-md-12 
       %h4
         Your current payment is: 
         %span#current-payment.currency
+        .pull-right.close#close-savings-results &times;
       %h4
         Your remaining balance is: 
         %span#remaining-balance.currency

@@ -9,6 +9,9 @@ $ ->
     applyAutoNumeric()
     event.preventDefault()
 
+  $("#close-savings-results").click ->
+    $("#savings-results").slideUp()
+
   $("#calculate-savings").click ->
     linkRate5 = 5.99
     linkRate10 = 5.99
@@ -25,7 +28,7 @@ $ ->
       tLeft = parseInt($(this).find(".remaining_term").val())
       totalBalance += p
       payment = pmt(p, r, t)
-      remainingBalance += fv(p, r, t-tLeft, payment)
+      remainingBalance += balance(p, r, t-tLeft, payment)
       currentPayment += payment
       remainingPaymentsTotal += (payment * tLeft)
 
@@ -39,11 +42,11 @@ $ ->
 
     # Subtract to get savings
     # 5 years
-    linkSavings5 = remainingPaymentsTotal - (linkPmt5 * 5 * 12)
+    linkSavings5 = Math.max(0, remainingPaymentsTotal - (linkPmt5 * 5 * 12))
     # 10 years
-    linkSavings10 = remainingPaymentsTotal - (linkPmt10 * 10 * 12)
+    linkSavings10 = Math.max(0, remainingPaymentsTotal - (linkPmt10 * 10 * 12))
     # 15 years
-    linkSavings15 = remainingPaymentsTotal - (linkPmt15 * 15 * 12)
+    linkSavings15 = Math.max(0, remainingPaymentsTotal - (linkPmt15 * 15 * 12))
 
     # fill in table & show it
     $("#current-payment").autoNumeric("set", currentPayment)
@@ -55,9 +58,11 @@ $ ->
     $("#savings-five").autoNumeric("set", linkSavings5)
     $("#savings-ten").autoNumeric("set", linkSavings10)
     $("#savings-fifteen").autoNumeric("set", linkSavings15)
+    $("#calculate-savings").text("Recalculate Your Savings")
+    $("#savings-results").fadeIn()
 
 pmt = (p, r, t) ->
   (p * (r / (1 - Math.pow((1 + r), (-t)))))
 
-fv = (pv, r, n, pmt) ->
+balance = (pv, r, n, pmt) ->
   pv*Math.pow(1+r, n) - pmt*(((Math.pow(1+r, n))-1)/r)

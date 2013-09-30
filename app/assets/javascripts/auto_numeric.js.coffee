@@ -5,3 +5,4 @@
 
   $(".currency").autoNumeric
     aSign: "$"
+    vMin: '-999999999.99'
