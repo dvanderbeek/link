@@ -10,7 +10,7 @@
     /[if lt IE 9]
       = javascript_include_tag "respond.min.js"
       = javascript_include_tag "html5shiv.js"
-  %body
+  %body{class: "#{params[:controller]} #{params[:action]}"}
     = render "navigation"
     = render partial: "messages", locals: { flash: flash }
     #page

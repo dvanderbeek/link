@@ -3,11 +3,41 @@
     .col-md-12
       %h1 Students
       %h3 Savings Calculator
-      .row.savings-calc-loan
-        .col-xs-4.balance
-          = text_field_tag :loan_balance, "", class: "form-control"
-        .col-xs-4.rate
-          = text_field_tag :loan_rate, "", class: "form-control"
-        .col-xs-4.term
-          = text_field_tag :loan_term, "", class: "form-control"
-      = link_to "Add Loan", "#", id: "savings-calculator-add-loan"
+      .row
+        .col-md-8
+          = render 'loan_fields'
+          = link_to_add_fields "Add a Loan"
+        .col-md-4
+          = link_to "Calculate Your Savings", "#", class: "btn btn-success", id: "calculate-savings"
+  .row
+    .col-md-12 
+      %h4
+        Your current payment is: 
+        %span#current-payment.currency
+      %h4
+        Your remaining balance is: 
+        %span#remaining-balance.currency
+      %h4
+        Your remaining payments total is: 
+        %span#remaining-payments.currency
+      %table.table
+        %thead
+          %tr
+            %th
+            %th{colspan: 3, style: "text-align: center"} Loan Term
+          %tr
+            %th
+            %th 5 Years
+            %th 10 Years
+            %th 15 Years
+        %tbody
+          %tr
+            %th Payment
+            %td#pmt-five.currency
+            %td#pmt-ten.currency
+            %td#pmt-fifteen.currency
+          %tr
+            %th Total Savings
+            %td#savings-five.currency
+            %td#savings-ten.currency
+            %td#savings-fifteen.currency
