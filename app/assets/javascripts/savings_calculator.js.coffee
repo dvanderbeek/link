@@ -13,14 +13,18 @@ $ ->
     $("#savings-results").slideUp()
 
   $("#calculate-savings").click ->
-    linkRate5 = 5.99
-    linkRate10 = 5.99
-    linkRate15 = 5.99
+    linkRate5 = 5.75
+    linkRate10 = 5.75
+    linkRate15 = 5.75
+    linkFee = 0.01
     # Calculate monthly and total payments for current loans
     currentPayment = 0
     remainingPaymentsTotal = 0
     totalBalance = 0
     remainingBalance = 0
+
+    #TODO VALIDATE FIELDS
+
     $(".savings-calc-loan").each ->
       p = parseFloat($(this).find(".balance").autoNumeric("get"))
       r = parseFloat($(this).find(".rate").autoNumeric("get"))/100/12
@@ -34,13 +38,13 @@ $ ->
 
     # Calculate monthly payments for Link loan
     # 5 years
-    linkPmt5 = pmt(remainingBalance, linkRate5/100/12, 5*12)
+    linkPmt5 = pmt((remainingBalance * (1 + linkFee)), linkRate5/100/12, 5*12)
     # 10 years
-    linkPmt10 = pmt(remainingBalance, linkRate10/100/12, 10*12)
+    linkPmt10 = pmt((remainingBalance * (1 + linkFee)), linkRate10/100/12, 10*12)
     # 15 years
-    linkPmt15 = pmt(remainingBalance, linkRate15/100/12, 15*12)
+    linkPmt15 = pmt((remainingBalance * (1 + linkFee)), linkRate15/100/12, 15*12)
 
-    # Subtract to get savings
+    # Calculate savings
     # 5 years
     linkSavings5 = Math.max(0, remainingPaymentsTotal - (linkPmt5 * 5 * 12))
     # 10 years

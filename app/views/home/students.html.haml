@@ -6,15 +6,15 @@
       .row
         .col-md-8
           = render 'loan_fields'
-          = link_to_add_fields "Add a Loan"
+          = link_to_add_fields "Add a loan if consolidating / refinancing more than one"
         .col-md-4
-          = link_to "Calculate Your Savings", "#", class: "btn btn-success", id: "calculate-savings"
+          = link_to "Calculate Your Savings", "#", class: "btn btn-success pull-right", id: "calculate-savings"
   .row#savings-results{style: "display: none;"}
     .col-md-12 
       %h4
         Your current payment is: 
         %span#current-payment.currency
-        .pull-right.close#close-savings-results &times;
+        .pull-right.close#close-savings-results.btn.btn-inverse &times;
       %h4
         Your remaining balance is: 
         %span#remaining-balance.currency
