@@ -2,6 +2,8 @@ $ ->
   $("body").on "click", ".remove-loan", ->
     $(this).closest(".savings-calc-loan").remove()
 
+  $(".remove-loan").first().hide()
+
   applyAutoNumeric()
 
   $('body').on 'click', '.add_fields', (event) ->
@@ -21,7 +23,6 @@ $ ->
     currentPayment = 0
     remainingPaymentsTotal = 0
     totalBalance = 0
-    remainingBalance = 0
 
     #TODO VALIDATE FIELDS
 
