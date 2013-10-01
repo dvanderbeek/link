@@ -14,11 +14,12 @@ $ ->
   $("#close-savings-results").click ->
     $("#savings-results").slideUp()
 
-  $("#calculate-savings").click ->
-    linkRate5 = 5.75
-    linkRate10 = 5.75
-    linkRate15 = 5.75
-    linkFee = 0.01
+  $("#savings-calculator").submit ->
+    event.preventDefault()
+    linkRate5 = 5.99
+    linkRate10 = 5.99
+    linkRate15 = 5.99
+    linkFee = 0.0
     # Calculate monthly and total payments for current loans
     currentPayment = 0
     remainingPaymentsTotal = 0
@@ -61,7 +62,7 @@ $ ->
     $("#savings-five").autoNumeric("set", linkSavings5)
     $("#savings-ten").autoNumeric("set", linkSavings10)
     $("#savings-fifteen").autoNumeric("set", linkSavings15)
-    $("#calculate-savings").text("Recalculate Your Savings")
+    $("#calculate-savings").val("Recalculate Your Savings")
     $("#savings-results").fadeIn()
 
 pmt = (p, r, t) ->

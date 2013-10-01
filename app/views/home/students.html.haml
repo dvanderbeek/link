@@ -4,41 +4,43 @@
       %h1 Students
       %h3 Savings Calculator
       .row
-        .col-md-8
-          = render 'loan_fields'
-          = link_to_add_fields "Add a loan if consolidating / refinancing more than one"
-        .col-md-4
-          = link_to "Calculate Your Savings", "#", class: "btn btn-success pull-right", id: "calculate-savings"
+        = form_tag "#", id: "savings-calculator" do
+          .col-md-8
+            = render 'loan_fields'
+            = link_to_add_fields "Add a loan if consolidating / refinancing more than one"
+          .col-md-4
+            = submit_tag "Calculate Your Savings", class: "btn btn-success pull-right", id: "calculate-savings"
   .row#savings-results{style: "display: none;"}
     .col-md-12 
-      %h4
-        Your monthly payment at your current interest rate is: 
-        %span#current-payment.currency
+      .well
         .pull-right.close#close-savings-results.btn.btn-inverse &times;
-      %h4
-        Your total remaining balance is: 
-        %span#remaining-balance.currency
-      %h4
-        The total of your remaining payments is: 
-        %span#remaining-payments.currency
-      %table.table
-        %thead
-          %tr
-            %th
-            %th{colspan: 3, style: "text-align: center"} Loan Term
-          %tr
-            %th
-            %th 5 Years
-            %th 10 Years
-            %th 15 Years
-        %tbody
-          %tr
-            %th Monthly Payment
-            %td#pmt-five.currency
-            %td#pmt-ten.currency
-            %td#pmt-fifteen.currency
-          %tr
-            %th Total Savings
-            %td#savings-five.currency
-            %td#savings-ten.currency
-            %td#savings-fifteen.currency
+        %h4
+          Your monthly payment at your current interest rate is: 
+          %span#current-payment.currency
+        %h4
+          Your total remaining balance is: 
+          %span#remaining-balance.currency
+        %h4
+          The total of your remaining payments is: 
+          %span#remaining-payments.currency
+        %table.table
+          %thead
+            %tr
+              %th
+              %th{colspan: 3, style: "text-align: center"} Loan Term
+            %tr
+              %th
+              %th 5 Years
+              %th 10 Years
+              %th 15 Years
+          %tbody
+            %tr
+              %th Monthly Payment
+              %td#pmt-five.currency
+              %td#pmt-ten.currency
+              %td#pmt-fifteen.currency
+            %tr
+              %th Total Savings
+              %td#savings-five.currency
+              %td#savings-ten.currency
+              %td#savings-fifteen.currency
