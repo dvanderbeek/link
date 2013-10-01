@@ -29,20 +29,18 @@ $ ->
       p = parseFloat($(this).find(".balance").autoNumeric("get"))
       r = parseFloat($(this).find(".rate").autoNumeric("get"))/100/12
       t = parseInt($(this).find(".term").val())
-      tLeft = parseInt($(this).find(".remaining_term").val())
       totalBalance += p
       payment = pmt(p, r, t)
-      remainingBalance += balance(p, r, t-tLeft, payment)
       currentPayment += payment
-      remainingPaymentsTotal += (payment * tLeft)
+      remainingPaymentsTotal += (payment * t)
 
     # Calculate monthly payments for Link loan
     # 5 years
-    linkPmt5 = pmt((remainingBalance * (1 + linkFee)), linkRate5/100/12, 5*12)
+    linkPmt5 = pmt((totalBalance * (1 + linkFee)), linkRate5/100/12, 5*12)
     # 10 years
-    linkPmt10 = pmt((remainingBalance * (1 + linkFee)), linkRate10/100/12, 10*12)
+    linkPmt10 = pmt((totalBalance * (1 + linkFee)), linkRate10/100/12, 10*12)
     # 15 years
-    linkPmt15 = pmt((remainingBalance * (1 + linkFee)), linkRate15/100/12, 15*12)
+    linkPmt15 = pmt((totalBalance * (1 + linkFee)), linkRate15/100/12, 15*12)
 
     # Calculate savings
     # 5 years
@@ -54,7 +52,7 @@ $ ->
 
     # fill in table & show it
     $("#current-payment").autoNumeric("set", currentPayment)
-    $("#remaining-balance").autoNumeric("set", remainingBalance)
+    $("#remaining-balance").autoNumeric("set", totalBalance)
     $("#remaining-payments").autoNumeric("set", remainingPaymentsTotal)
     $("#pmt-five").autoNumeric("set", linkPmt5)
     $("#pmt-ten").autoNumeric("set", linkPmt10)
