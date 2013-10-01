@@ -1,8 +1,10 @@
+
+$apply-btn-bg: $brand-success;
+$navbar-toggle-border: #333;
+
 .navbar {
   margin-bottom: 0!important;
 }
-
-$apply-btn-bg: $brand-success;
 
 #apply-btn {
   background: $apply-btn-bg;
@@ -28,8 +30,32 @@ $apply-btn-bg: $brand-success;
 }
 
 .home.index .navbar-default {
-  background-color: #474749!important;
+  background-color: #474749;
+  .navbar-toggle {
+    border-color: $navbar-toggle-border;
+    &:hover {
+      background-color: lighten($navbar-toggle-border, 15%);
+    }
+    .icon-bar {
+      background-color: $navbar-toggle-border;
+    }
+  }
+  .navbar-collapse {
+    border-color: $navbar-toggle-border;
+  }
+  .navbar-nav {
+    li {
+      a {
+        color: #ffffff;
+        text-shadow: 1px 1px 3px #222222;
+        &:hover {
+          color: darken(#ffffff, 15%);
+        }
+      }
+    }
+  }
 }
+
 
 #footer {
   background-color: #242E2D;
