@@ -10,10 +10,10 @@
             = link_to_add_fields "Add a loan if consolidating / refinancing more than one"
           .col-md-4
             = submit_tag "Calculate Your Savings", class: "btn btn-success pull-right", id: "calculate-savings"
-  .row#savings-results{style: "display: none;"}
+  .row
     .col-md-12 
-      .well
-        .pull-right.close#close-savings-results.btn.btn-inverse &times;
+      .well#savings-results{style: "display: none; margin-top: 20px; background: #ffffff;"}
+        .pull-right#close-savings-results.btn.btn-default &times;
         %h4
           Your monthly payment at your current interest rate is: 
           %span#current-payment.currency

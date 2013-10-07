@@ -1,24 +1,26 @@
 #footer
   .container
     .row
-      .col-xs-6
+      .col-xs-5
         .media
           = link_to(image_tag("http://placehold.it/80x80", class: "media-object"), "#", class: "pull-left")
           .media-body
-            %strong We're passionate about giving back
-            %br/
-            That's why we donate 20% of our revenues to the colleges and universities where our loans are offered
+            %h7 We're passionate about giving back
+            That's why we donate 20% of our revenues to the colleges and universities where our loans are offered.
+      .col-xs-1
       .col-xs-3
         %p
-          %strong FAQ
-          %br/
+          .title FAQ
           Have a question? 
           %br/
           = link_to "Find the answer", faqs_url
       .col-xs-3
         %p 
-          %strong Link Capital
-          %br/
+          .title Link Capital
           (312) 226-6700
           %br/
           = link_to "support@linkcapital.com", "mailto:support@linkcapital.com"
+    %hr
+    .row.copyright
+      .col-xs-6
+        &copy; Copyright 2013 Link Capital

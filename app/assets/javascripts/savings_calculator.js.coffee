@@ -2,8 +2,6 @@ $ ->
   $("body").on "click", ".remove-loan", ->
     $(this).closest(".savings-calc-loan").remove()
 
-  $(".remove-loan").first().hide()
-
   applyAutoNumeric()
 
   $('body').on 'click', '.add_fields', (event) ->
@@ -12,12 +10,13 @@ $ ->
     event.preventDefault()
 
   $("#close-savings-results").click ->
+    $(this).hide()
     $("#savings-results").slideUp()
 
   $("#savings-calculator").submit ->
     event.preventDefault()
-    linkRate5 = 5.99
-    linkRate10 = 5.99
+    linkRate5 = 4.99
+    linkRate10 = 5.45
     linkRate15 = 5.99
     linkFee = 0.0
     # Calculate monthly and total payments for current loans
@@ -63,7 +62,8 @@ $ ->
     $("#savings-ten").autoNumeric("set", linkSavings10)
     $("#savings-fifteen").autoNumeric("set", linkSavings15)
     $("#calculate-savings").val("Recalculate Your Savings")
-    $("#savings-results").fadeIn()
+    $("#close-savings-results").show()
+    $("#savings-results").slideDown()
 
 pmt = (p, r, t) ->
   (p * (r / (1 - Math.pow((1 + r), (-t)))))

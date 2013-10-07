@@ -1,7 +1,7 @@
 %ul.faqs
   - @faqs.each do |faq|
     %li
-      %b= highlight faq.question, params[:search].present? ? params[:search].split(" ") : ""
+      %h6= highlight faq.question, params[:search].present? ? params[:search].split(" ") : ""
       %p
         = highlight faq.answer, params[:search].present? ? params[:search].split(" ") : ""
         - if params[:edit] == "true"
