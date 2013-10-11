@@ -1,11 +1,14 @@
+= render partial: "page_heading", locals: { title: "Frequently Asked Questions", subtitle: "Need a little help?  Look through some of our frequently asked questions below and if you don't see what you're looking for, go ahead, ask anyway." }
 .container
   .row
     .col-md-12
-      %h1 Frequently Asked Questions
-
+      %h6 Find answers
+  .row#faq-search
+    .col-md-6
       = form_tag faqs_path, method: :get, id: "faqs_search", remote: true do
         = text_field_tag :search, params[:search], class: "form-control", placeholder: "Search FAQ's"
-        #faqs
-          = render 'faqs'
+  .row
+    .col-md-12#faqs
+      = render 'faqs'
 
       = link_to 'New FAQ', new_faq_path if params[:edit] == "true"

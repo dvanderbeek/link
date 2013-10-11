@@ -1,7 +1,8 @@
+= render partial: "page_heading", locals: { title: "For Student Loans", subtitle: "We link you to investors from your organization or school. They make a smart investment and you save more money." }
 .container
   .row
     .col-md-12
-      %h1 Students
+      %h4.center Why is Link better?
       %h3 Savings Calculator
       .row
         = form_tag "#", id: "savings-calculator" do
@@ -11,7 +12,7 @@
           .col-md-4
             = submit_tag "Calculate Your Savings", class: "btn btn-success pull-right", id: "calculate-savings"
   .row
-    .col-md-12 
+    .col-md-12
       .well#savings-results{style: "display: none; margin-top: 20px; background: #ffffff;"}
         .pull-right#close-savings-results.btn.btn-default &times;
         %h4
