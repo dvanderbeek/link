@@ -22,5 +22,5 @@
     = f.text_area :content, rows: 5, class: "form-control", placeholder: "Message*"
     - if @message.errors.messages[:content].present?
       %p.help-block= @message.errors.messages[:content][0]
-  %p.help-block * Required
+  %p.help-block.pull-left * Required
   = f.submit "Submit", class: "btn btn-primary pull-right"

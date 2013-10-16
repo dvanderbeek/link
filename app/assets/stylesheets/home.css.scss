@@ -168,6 +168,7 @@ a {
 
 #page-heading {
   background: $header-bg;
+  border-bottom: 5px solid #353E47;
 }
 
 #hero-title {
@@ -235,5 +236,22 @@ a {
   #feature-three {
     border-top: 5px solid #0084A5;
     border-right: 1px solid #E6E6E6;
+  }
+}
+
+.frame {
+  background: #fff; 
+  padding: 20px; 
+  border-top: 5px solid #77BA03; 
+  margin-top: -5px;
+}
+.why-link {
+  margin-bottom: 30px;
+}
+.description {
+  margin-bottom: 30px;
+  img {
+    max-width: 100%;
+    min-width: 100%;
   }
 }
