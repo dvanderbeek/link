@@ -1,25 +1,27 @@
 #footer
   .container
     .row
-      .col-md-6
+      .col-sm-6
         .media
           = image_tag "donut-chart.png", class: "media-object pull-left"
           .media-body
             %h7 We're passionate about giving back
-            That's why we donate 20% of our revenues to the colleges and universities where our loans are offered.
-      .col-md-2
-      .col-md-2
-        %p
-          .title FAQ
-          Have a question? 
-          %br/
-          = link_to "Find the answer", faqs_url
-      .col-md-2
-        %p 
-          .title Link Capital
-          (312) 226-6700
-          %br/
-          = link_to "support@linkcapital.com", "mailto:support@linkcapital.com"
+            That's why we donate 20% of our profits to the colleges and universities where our loans are offered.
+      .col-sm-2
+      .col-sm-4
+        .row
+          .col-md-6
+            %p
+              .title FAQ
+              Have a question? 
+              %br/
+              = link_to "Find the answer", faqs_url
+          .col-md-6
+            %p 
+              .title Link Capital
+              (312) 226-6700
+              %br/
+              = link_to "support@linkcapital.com", "mailto:support@linkcapital.com"
     %hr
     .row.copyright
       .col-xs-6

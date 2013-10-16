@@ -1,24 +1,27 @@
-= render partial: "page_heading", locals: { title: "For Student Loans", subtitle: "We link you to investors from your organization or school. They make a smart investment and you save more money." }
+= render partial: "page_heading", locals: { image: "http://placehold.it/400x200", title: "For Student Loans", subtitle: "We link you to investors from your organization or school. They invest to allow you to refinance your student loans at a lower rate, saving you money." }
 .container
   .row
     .col-md-12
       .frame
-        %h4.center.why-link Why is Link better?
+        %h4.center.why-link How It Works
         .row.description
           .col-sm-6
             = image_tag "http://www.placehold.it/400x200"
           .col-sm-6
-            Text
+            %strong Federal student loans do not account for a borrower’s ability to repay the loan. 
+            Students who are likely to repay their loan are charged the same interest rate as students who are extremely unlikely to ever repay.
         .row.description
           .col-sm-6
-            Text
+            %strong We think this approach is unfair, 
+            and we help students who are likely to repay save money by refinancing their loans at a lower interest rate.
           .col-sm-6
             = image_tag "http://www.placehold.it/400x200"
         .row.description
           .col-sm-6
             = image_tag "http://www.placehold.it/400x200"
           .col-sm-6
-            Text
+            %strong We pay for these refinanced loans with investment from investors in your organization or school’s alumni group. 
+            Your interest payments on your new refinanced loan becomes return their investment, enabling investors to make money while helping you save.
   /       %h3 Savings Calculator
   /       .row
   /         = form_tag "#", id: "savings-calculator" do

@@ -200,6 +200,28 @@ a {
   }
 }
 
+@media (max-width: 767px) {
+  #page-heading {
+    padding: 30px 0;
+  }
+  .description {
+    .col-sm-6 {
+      &:first-child {
+        padding-bottom: 30px;
+      }
+      &:last-child {
+        padding-bottom: 60px;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  #page-heading {
+    padding: 50px 0;
+  }
+}
+
 @media (min-width: 992px) { 
   .navbar-default {
     background-color: transparent;
@@ -212,7 +234,7 @@ a {
   }
   #page { padding: 0; }
   #page-heading {
-    padding: 100px 0;
+    padding: 100px 0 50px 0;
   }
   .navbar-nav > li > a {
     padding-top: 30px;
