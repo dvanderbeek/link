@@ -8,11 +8,13 @@
 .container
   .row#features
     .col-sm-4.first
-      .feature#feature-one 
+      .feature#feature-one
         %h6 For Students
-        %p 
-          = image_tag "http://placehold.it/90x200", class: "pull-right", style: "margin-left: 10px; margin-bottom: -20px;"
+        %p
+          = image_tag "http://placehold.it/90x100", class: "pull-right", style: "margin-left: 10px;"
           Save up to $30,000 versus Federal loans by refinancing with the help of investors from your school or organization network
+        = link_to "Learn More", students_path, class: "btn btn-primary"
+        = link_to "Apply Now", apply_path, class: "btn btn-success"
         .clearfix
     .col-sm-4.middle
       .feature#feature-two
@@ -20,11 +22,13 @@
         %p
           = image_tag "http://placehold.it/90x200", class: "pull-right", style: "margin-left: 10px; margin-bottom: -20px;"
           Create an invaluable corporate benefit program that saves employees money while generating revenue for your organization
+        = link_to "Learn More", organizations_path, class: "btn btn-primary"
         .clearfix
     .col-sm-4.last
-      .feature#feature-three 
+      .feature#feature-three
         %h6 For Investors
-        %p 
+        %p
           = image_tag "http://placehold.it/90x200", class: "pull-right", style: "margin-left: 10px; margin-bottom: -20px;"
           Earn healthy financial returns while helping lower education costs for junior members of your network
+        = link_to "Learn More", investors_path, class: "btn btn-primary"
         .clearfix

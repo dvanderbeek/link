@@ -169,7 +169,8 @@ a {
 } 
 
 #page-heading {
-  background: $header-bg;
+  background: $header-bg url('page-header-bg.png');
+  background-size: cover;
   border-bottom: 5px solid #353E47;
 }
 
@@ -218,7 +219,7 @@ a {
 
 @media (min-width: 768px) {
   #page-heading {
-    padding: 50px 0;
+    padding: 50px 0 20px 0;
   }
 }
 
@@ -234,7 +235,7 @@ a {
   }
   #page { padding: 0; }
   #page-heading {
-    padding: 100px 0 50px 0;
+    padding: 100px 0 20px 0;
   }
   .navbar-nav > li > a {
     padding-top: 30px;
@@ -250,6 +251,10 @@ a {
     padding: 20px; 
     background: #FFFFFF;
     border-left: 1px solid #E6E6E6;
+    min-height: 264px;
+    p {
+      min-height: 120px; 
+    }
   }
   #feature-one {
     border-top: 5px solid $brand-success;
