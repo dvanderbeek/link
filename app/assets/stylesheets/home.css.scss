@@ -224,9 +224,32 @@ a {
   #page-heading {
     padding: 50px 0 20px 0;
   }
+  #features {
+    .col-sm-4 {
+      height: 298px;
+      .feature {
+        p {
+          min-height: 171px;
+        }
+      }
+    }
+    .btn {
+      padding: 6px 10px;
+    }
+  }
 }
 
 @media (min-width: 992px) { 
+  #features {
+    .col-sm-4 {
+      height: 298px;
+      .feature {
+        p {
+          min-height: 141px;
+        }
+      }
+    }
+  }
   .navbar-default {
     background-color: transparent;
     &.scrolled {
@@ -255,6 +278,7 @@ a {
     background: #FFFFFF;
     border-left: 1px solid #E6E6E6;
     min-height: 264px;
+    height: 100%;
     p {
       min-height: 120px; 
     }
