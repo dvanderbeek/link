@@ -183,12 +183,30 @@ a {
     height: 419px;
     background: lighten($header-bg, 10%) url('hero-bg-768.png') center;
   }
+  #hero-title {
+    h2 {
+      margin-top: 65px!important;
+      font-size: 26px;
+    }
+    h1 {
+      font-size: 32px;
+    }
+  }
 }
 
 @media (max-width: 767px) { 
   #hero-background {
     height: 419px;
     background: lighten($header-bg, 10%) url('hero-bg-320.png') center;
+  }
+  #hero-title {
+    h2 {
+      margin-top: 65px!important;
+      font-size: 26px;
+    }
+    h1 {
+      font-size: 32px;
+    }
   }
 }
 
