@@ -91,12 +91,12 @@ a {
   background-color: $header-bg;
   .navbar-toggle {
     margin-top: 22px;
-    border-color: $navbar-toggle-border;
+    border-color: #fff;
     &:hover, &:focus {
       background-color: lighten($navbar-toggle-border, 15%);
     }
     .icon-bar {
-      background-color: $navbar-toggle-border;
+      background-color: #fff;
     }
   }
   .navbar-collapse {
