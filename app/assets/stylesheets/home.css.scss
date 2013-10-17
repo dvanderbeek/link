@@ -2,6 +2,7 @@
 $apply-btn-bg: $brand-success;
 $navbar-toggle-border: #333;
 $header-bg: #474749;
+$hero-bg-color: #2E2D2D;
 
 .center { text-align: center; }
 
@@ -172,7 +173,8 @@ a {
 }
 
 #hero-background {
-  background: lighten($header-bg, 10%) url('hero-bg.png') center;
+  background: $hero-bg-color url('hero-bg.jpg') center;
+  background-repeat: no-repeat;
   height: 540px;
   border-bottom: 5px solid #353E47;
   margin-bottom: -5px;
@@ -181,7 +183,7 @@ a {
 @media (max-width: 991px) { 
   #hero-background {
     height: 419px;
-    background: lighten($header-bg, 10%) url('hero-bg-768.png') center;
+    background: $hero-bg-color url('hero-bg-768.jpg') center;
   }
   #hero-title {
     h2 {
@@ -197,7 +199,7 @@ a {
 @media (max-width: 767px) { 
   #hero-background {
     height: 419px;
-    background: lighten($header-bg, 10%) url('hero-bg-320.png') center;
+    background: $hero-bg-color url('hero-bg-320.jpg') center;
   }
   #hero-title {
     h2 {
