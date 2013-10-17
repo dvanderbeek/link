@@ -172,11 +172,25 @@ a {
 }
 
 #hero-background {
-  background: lighten($header-bg, 10%);
-  min-height: 400px;
+  background: lighten($header-bg, 10%) url('hero-bg.png') center;
+  height: 540px;
   border-bottom: 5px solid #353E47;
   margin-bottom: -5px;
 } 
+
+@media (max-width: 991px) { 
+  #hero-background {
+    height: 419px;
+    background: lighten($header-bg, 10%) url('hero-bg-768.png') center;
+  }
+}
+
+@media (max-width: 767px) { 
+  #hero-background {
+    height: 419px;
+    background: lighten($header-bg, 10%) url('hero-bg-320.png') center;
+  }
+}
 
 #page-heading {
   background: $header-bg url('page-header-bg.jpg');
