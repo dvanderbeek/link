@@ -6,7 +6,7 @@
   .row#faq-search
     .col-md-6
       = form_tag faqs_path, method: :get, id: "faqs_search", remote: true do
-        = text_field_tag :search, params[:search], class: "form-control", placeholder: "Search FAQ's"
+        = text_field_tag :search, params[:search], class: "form-control", placeholder: "Search FAQ's (just start typing)"
   .row
     .col-md-12#faqs
       = render 'faqs'

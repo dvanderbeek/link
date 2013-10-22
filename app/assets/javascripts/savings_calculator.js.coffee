@@ -16,7 +16,7 @@ $ ->
   $("#savings-calculator").submit ->
     event.preventDefault()
     linkRate5 = 4.99
-    linkRate10 = 5.45
+    linkRate10 = 6.00
     linkRate15 = 5.99
     linkFee = 0.0
     # Calculate monthly and total payments for current loans
@@ -61,9 +61,9 @@ $ ->
     $("#savings-five").autoNumeric("set", linkSavings5)
     $("#savings-ten").autoNumeric("set", linkSavings10)
     $("#savings-fifteen").autoNumeric("set", linkSavings15)
-    $("#calculate-savings").val("Recalculate Your Savings")
+    $("#calculate-savings").val("Recalculate")
     $("#close-savings-results").show()
-    $("#savings-results").slideDown()
+    $("#savings-results").fadeIn()
 
 pmt = (p, r, t) ->
   (p * (r / (1 - Math.pow((1 + r), (-t)))))
