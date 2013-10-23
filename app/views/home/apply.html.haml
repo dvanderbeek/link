@@ -40,6 +40,8 @@
             = text_field_tag :loan_term, "", class: "form-control term", placeholder: "120"
         = submit_tag "Calculate", class: "btn btn-primary pull-right", id: "calculate-savings"
       .clearfix
+      #insufficient-data{style: "display: none; margin-top: 20px;"}
+        .alert.alert-danger Please enter data for at least one loan to calculate your estimated savings.
       #savings-results{style: "margin: 30px 0; display: none;"}
         %h6 Your Estimated Savings With Link
-        .savings#savings-ten.currency $100,000
+        .savings#savings-ten.currency Enter some details!
