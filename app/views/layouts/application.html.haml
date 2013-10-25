@@ -16,3 +16,18 @@
     #page
       = yield
     = render 'footer'
+    / UserVoice JavaScript SDK (only needed once on a page)
+    :javascript
+      (function(){var uv=document.createElement('script');uv.type='text/javascript';uv.async=true;uv.src='//widget.uservoice.com/Rq6yqgh9QumgClpNu1XTOQ.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(uv,s)})()
+    / A tab to launch the Classic Widget
+    :javascript
+      UserVoice = window.UserVoice || [];
+      UserVoice.push(['showTab', 'classic_widget', {
+        mode: 'support',
+        primary_color: '#ffffff',
+        link_color: '#007dbf',
+        tab_label: 'Talk to Link Capital Today',
+        tab_color: '#339ff2',
+        tab_position: 'middle-right',
+        tab_inverted: false
+      }]);
