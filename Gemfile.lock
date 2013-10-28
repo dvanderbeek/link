@@ -50,6 +50,10 @@ GEM
     coffee-script-source (1.6.3)
     erubis (2.7.0)
     execjs (2.0.1)
+    ezcrypto (0.7.2)
+    figaro (0.6.3)
+      bundler (~> 1.0)
+      rails (>= 3, < 5)
     haml (4.0.3)
       tilt
     haml-rails (0.4)
@@ -74,6 +78,7 @@ GEM
     mime-types (1.25)
     multi_json (1.8.0)
     newrelic_rpm (3.6.7.152)
+    oauth (0.4.7)
     pg (0.17.0)
     pg_search (0.7.0)
       activerecord (>= 3.1)
@@ -124,6 +129,10 @@ GEM
     uglifier (2.2.1)
       execjs (>= 0.3.0)
       multi_json (~> 1.0, >= 1.0.2)
+    uservoice-ruby (0.0.11)
+      ezcrypto (>= 0.7.2)
+      json (>= 1.7.5)
+      oauth (>= 0.4.7)
 
 PLATFORMS
   ruby
@@ -132,6 +141,7 @@ DEPENDENCIES
   active_attr
   bootstrap-sass!
   coffee-rails (~> 3.2.1)
+  figaro
   haml-rails
   jquery-rails
   letter_opener
@@ -141,3 +151,4 @@ DEPENDENCIES
   rails (= 3.2.13)
   sass-rails (~> 3.2.3)
   uglifier (>= 1.0.3)
+  uservoice-ruby
