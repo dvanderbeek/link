@@ -190,6 +190,10 @@ a {
   margin-bottom: -5px;
 } 
 
+#hero-title {
+  h1 { font-size: 43px; }
+}
+
 @media (max-width: 991px) { 
   #hero-background {
     height: 419px;
