@@ -1,5 +1,5 @@
 Linkcapital::Application.routes.draw do
-  resources :faqs, except: [:show]
+  resources :faqs, only: [:index]
   get :students, to: 'home#students', as: :students
   get :investors, to: 'home#investors', as: :investors
   get :organizations, to: 'home#organizations', as: :organizations
