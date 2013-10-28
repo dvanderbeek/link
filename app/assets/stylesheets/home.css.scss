@@ -4,6 +4,16 @@ $navbar-toggle-border: #333;
 $header-bg: #474749;
 $hero-bg-color: #2E2D2D;
 
+#uvw-dialog-powered-by-uv-1 {
+  display: none!important;
+}
+#uvTab {
+  background-image: none!important;
+}
+#uvTabLabel {
+  padding-top: 10px!important;
+}
+
 .center { text-align: center; }
 
 h1, h2, h3, h4, h5, h6, h7, p, a {
