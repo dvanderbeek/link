@@ -21,7 +21,7 @@ class MessagesController < ApplicationController
           }
         })['ticket']
 
-        format.html { redirect_to root_url, notice: "Message sent! Thank you for contacting us; we will get back to you as soon as possible." }
+        format.html { redirect_to root_url, notice: "Thank you for contacting us!  Your message was sent and we will get back to you as soon as possible." }
         format.js
       else
         format.html { render "new" }
