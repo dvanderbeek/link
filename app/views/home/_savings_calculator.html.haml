@@ -1,0 +1,14 @@
+%p Want to know how much you could save by refinancing with Link?  Find out below!
+= form_tag "#", id: "savings-calculator" do
+  .savings-calc-loan
+    .form-group
+      = label_tag :loan_balance, "Remaining Balance"
+      = text_field_tag :loan_balance, "", class: "form-control currency balance", placeholder: "$50,000"
+    .form-group
+      = label_tag :loan_rate, "Existing Interest Rate"
+      = text_field_tag :loan_rate, "", class: "form-control percent rate", placeholder: "7.9%"
+    / .form-group
+    /   = label_tag :loan_term, "Months Remaining on Loan"
+    /   = text_field_tag :loan_term, "", class: "form-control term", placeholder: "120"
+  = submit_tag "Calculate", class: "btn btn-primary pull-right", id: "calculate-savings"
+.clearfix
