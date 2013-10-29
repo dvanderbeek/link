@@ -2,5 +2,7 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 $ ->
-  $('body').on "keyup", "#search", ->
-    $("#faqs_search").submit()
+  # $('body').on "keyup", "#search", ->
+  #   $("#faqs_search").submit()
+
+  $("#search").fastLiveFilter "ul.faqs"
