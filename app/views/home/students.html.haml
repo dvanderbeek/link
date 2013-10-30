@@ -2,39 +2,41 @@
 .container
   .row
     .col-md-12
-      .frame
-        %h4.center.why-link How It Works
-        .row.description
-          .col-sm-6
-            = image_tag "students1.png", class: "hidden-xs"
-            = image_tag "students1xs.png", class: "visible-xs"
-          .col-sm-6
-            %p#students-1
-              %strong.field-title Federal student loans do not account for a borrower’s ability to repay the loan. 
-              %span.field-text Students who are likely to repay their loan are charged the same interest rate as students who are extremely unlikely to ever repay.
-        .row.description
-          .col-sm-6
-            %p#students-2
-              %strong.field-title We think this approach is unfair, 
-              %span.field-text and we help students who are likely to repay save money by refinancing their loans at a lower interest rate.
-          .col-sm-6
-            = image_tag "students2.png", class: "hidden-xs"
-            = image_tag "students2xs.png", class: "visible-xs"
-        .row.description
-          .col-sm-6
-            = image_tag "students3.png", class: "hidden-xs"
-            = image_tag "students3xs.png", class: "visible-xs"
-          .col-sm-6
-            %p#students-3
-              %strong.field-title We pay for these refinanced loans with investment from investors in your organization or school’s alumni group. 
-              %span.field-text Your interest payments on your new refinanced loan becomes return on their investment, enabling investors to make money while helping you save.
-        %hr
-        .row
-          .col-md-6
-            %h4{style: "margin-top: 30px;"} Estimated Savings Calculator
-            = render 'savings_calculator'
-          .col-md-6
-            = render 'savings_results'
+      .mt-neg-5.bg-white
+        .stripe.bg-green.h5
+        .pad
+          %h4.center.why-link How It Works
+          .row.description
+            .col-sm-6
+              = image_tag "students1.png", class: "hidden-xs"
+              = image_tag "students1xs.png", class: "visible-xs"
+            .col-sm-6
+              %p#students-1
+                %strong.field-title Federal student loans do not account for a borrower’s ability to repay the loan. 
+                %span.field-text Students who are likely to repay their loan are charged the same interest rate as students who are extremely unlikely to ever repay.
+          .row.description
+            .col-sm-6
+              %p#students-2
+                %strong.field-title We think this approach is unfair, 
+                %span.field-text and we help students who are likely to repay save money by refinancing their loans at a lower interest rate.
+            .col-sm-6
+              = image_tag "students2.png", class: "hidden-xs"
+              = image_tag "students2xs.png", class: "visible-xs"
+          .row.description
+            .col-sm-6
+              = image_tag "students3.png", class: "hidden-xs"
+              = image_tag "students3xs.png", class: "visible-xs"
+            .col-sm-6
+              %p#students-3
+                %strong.field-title We pay for these refinanced loans with investment from investors in your organization or school’s alumni group. 
+                %span.field-text Your interest payments on your new refinanced loan becomes return on their investment, enabling investors to make money while helping you save.
+          %hr
+          .row
+            .col-md-6
+              %h4{style: "margin-top: 30px;"} Estimated Savings Calculator
+              = render 'savings_calculator'
+            .col-md-6
+              = render 'savings_results'
   /       %p{style: "margin-bottom: 30px;"}
   /         %span.field-text Want to know how much you could save by refinancing with Link? Find out below!
   /       .row
