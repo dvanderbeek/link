@@ -5,10 +5,6 @@ $header-bg: #474749;
 $hero-bg-color: #2E2D2D;
 
 $features-border: #E6E6E6;
-$green: #77BA03;
-$light-blue: #41B0C4;
-$dark-blue: #0084A5;
-$background-grey: #f1f1f1;
 
 #uvw-dialog-powered-by-uv-1 {
   display: none!important;
@@ -41,7 +37,7 @@ h1, h2, h3, h4, h5, h6, h7, p, a {
 
 h1, h2 { text-transform: uppercase; }
 
-h1, h2, h3, h5, #apply-btn, .btn {
+h1, h2, h3, h5, #apply-btn, .btn-success, .btn-primary {
   text-shadow: 1px 1px 2px #333232;
 }
 
@@ -354,10 +350,10 @@ a {
 .h5 { height: 5px; }
 .h290 { height: 290px; }
 /* Background colors */
-.bg-green { background: $green; }
-.bg-light-blue { background: $light-blue; }
-.bg-dark-blue { background: $dark-blue; }
-.bg-grey { background: $background-grey; }
+.bg-green { background: $green-bg; }
+.bg-light-blue { background: $light-blue-bg; }
+.bg-dark-blue { background: $dark-blue-bg; }
+.bg-grey { background: $grey-bg; }
 .bg-white { background: #ffffff; }
 /* Positioning */
 .relative { position: relative; }

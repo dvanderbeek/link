@@ -3,7 +3,8 @@
   .school {
     background: #FFFFFF;
     position: relative;
-    border-radius: 8px;
+    @include border-top-radius(8px);
+    @include border-bottom-radius(8px);
     text-align: center;
     padding: 50px 20px 70px 20px;
     margin-bottom: 30px;
