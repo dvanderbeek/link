@@ -4,6 +4,12 @@ $navbar-toggle-border: #333;
 $header-bg: #474749;
 $hero-bg-color: #2E2D2D;
 
+$features-border: #E6E6E6;
+$green: #77BA03;
+$light-blue: #41B0C4;
+$dark-blue: #0084A5;
+$background-grey: #f1f1f1;
+
 #uvw-dialog-powered-by-uv-1 {
   display: none!important;
 }
@@ -269,18 +275,6 @@ a {
   }
 }
 @media (min-width: 768px) { 
-  #features { 
-    .first {
-      padding-right: 0px;
-    }
-    .middle {
-      padding-right: 0px;
-      padding-left: 0px;
-    }
-    .last {
-      padding-left: 0px;
-    }
-  }
   #unfair {
     padding-top: 100px;
   }
@@ -305,16 +299,6 @@ a {
 @media (min-width: 768px) {
   #page-heading {
     padding: 50px 0 20px 0;
-  }
-  #features {
-    .col-sm-4 {
-      height: 298px;
-      .feature {
-        p {
-          min-height: 171px;
-        }
-      }
-    }
   }
 }
 
@@ -351,28 +335,41 @@ a {
   }
 }
 
-#features {
-  .feature { 
-    padding: 20px; 
-    background: #FFFFFF;
-    border-left: 1px solid #E6E6E6;
-    min-height: 264px;
-    height: 100%;
-    p {
-      min-height: 120px; 
-    }
-  }
-  #feature-one {
-    border-top: 5px solid $brand-success;
-  }
-  #feature-two {
-    border-top: 5px solid #41B0C4;
-  }
-  #feature-three {
-    border-top: 5px solid #0084A5;
-    border-right: 1px solid #E6E6E6;
-  }
+
+/**************************** FEATURES ****************************/
+/* Borders */
+.bt { border-top: 1px solid $features-border; }
+.br { border-right: 1px solid $features-border; }
+.bb { border-bottom: 1px solid $features-border; }
+.bl { border-left: 1px solid $features-border; }
+/* No gutter columns */
+.one-third { width: 33.33333333333%; }
+/* Margin & padding */
+.pad { padding: 17px; }
+.mt-neg-5 { margin-top: -5px; }
+.ml-10 { margin-left: 10px; }
+.mr-neg-17 { margin-right: -17px; }
+.mb-neg-20 { margin-bottom: -20px; }
+/* Heights */
+.h5 { height: 5px; }
+.h290 { height: 290px; }
+/* Background colors */
+.bg-green { background: $green; }
+.bg-light-blue { background: $light-blue; }
+.bg-dark-blue { background: $dark-blue; }
+.bg-grey { background: $background-grey; }
+.bg-white { background: #ffffff; }
+/* Positioning */
+.relative { position: relative; }
+.absolute { position: absolute; }
+.pos-b-30 { bottom: 30px; }
+/* Responsive (sort of hacks) */
+@media (max-width: 767px) {
+  .one-third { width: 100%; }
+  .br { border-left: 1px solid $features-border; }
+  .bl { border-right: 1px solid $features-border; }
 }
+/**************************** FEATURES ****************************/
 
 .frame {
   background: #fff; 
