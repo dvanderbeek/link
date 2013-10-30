@@ -270,11 +270,6 @@ a {
     margin-top: 10px;
   }
 }
-@media (min-width: 768px) { 
-  #unfair {
-    padding-top: 100px;
-  }
-}
 
 @media (max-width: 767px) {
   #page-heading {
@@ -366,6 +361,33 @@ a {
   .bl { border-right: 1px solid $features-border; }
 }
 /**************************** FEATURES ****************************/
+
+/**************************** HOW IT WORKS TEXT ****************************/
+/* Tablet */
+@media (min-width: 768px) {
+  #students-1 { margin-top: 0px; }
+  #students-2 { margin-top: 50px; }
+  #students-3 { margin-top: 20px; }
+  #organizations-1 { margin-top: 0px; }
+  #organizations-2 { margin-top: 0px; }
+  #organizations-3 { margin-top: 0px; }
+  #investors-1 { margin-top: 0px; }
+  #investors-2 { margin-top: 0px; }
+  #investors-3 { margin-top: 0px; }
+}
+/* Computer */
+@media (min-width: 992px) {
+  #students-1 { margin-top: 30px; }
+  #students-2 { margin-top: 100px; }
+  #students-3 { margin-top: 50px; }
+  #organizations-1 { margin-top: 30px; }
+  #organizations-2 { margin-top: 40px; }
+  #organizations-3 { margin-top: 70px; }
+  #investors-1 { margin-top: 30px; }
+  #investors-2 { margin-top: 40px; }
+  #investors-3 { margin-top: 50px; }
+}
+/**************************** HOW IT WORKS TEXT ****************************/
 
 .frame {
   background: #fff; 
