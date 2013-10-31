@@ -18,6 +18,7 @@ $ ->
 
     if($(".savings-calc-loan").length == 1 && ($(".balance").val() == "" || $(".rate").val() == ""))
       $("#savings-results").hide()
+      # VALIDATE THE FIELDS AND ADD/REMOVE ERRORS AS APPROPRIATE
       $(".savings-calc-loan .form-group .form-control").each ->
         if $(this).val() == ""
           $(this).parents(".form-group").addClass("has-error")
