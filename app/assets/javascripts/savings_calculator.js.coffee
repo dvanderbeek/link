@@ -18,9 +18,21 @@ $ ->
 
     if($(".savings-calc-loan").length == 1 && ($(".balance").val() == "" || $(".rate").val() == ""))
       $("#savings-results").hide()
-      $("#insufficient-data").fadeIn()
+      $(".savings-calc-loan .form-group .form-control").each ->
+        if $(this).val() == ""
+          $(this).parents(".form-group").addClass("has-error")
+          $(this).addClass("field-with-errors")
+          unless $(this).siblings(".help-block").length == 1
+            $(this).parents(".form-group").append("<p class='help-block'>can't be blank</p>")
+        else 
+          $(this).removeClass("field-with-errors")
+          $(this).siblings(".help-block").remove()
+          $(this).parents(".form-group").removeClass("has-error")
     else
-      $("#insufficient-data").hide()
+      $(".savings-calc-loan .form-group").each ->
+        $(this).removeClass("has-error")
+        $(this).children(".form-control").removeClass("field-with-errors")
+        $(this).children(".help-block").remove()
       linkRate10 = 5.75
       linkFee = 0.01
       # Calculate monthly and total payments for current loans
@@ -56,6 +68,7 @@ $ ->
       $("#savings-ten").autoNumeric("set", linkSavings10)
       $("#calculate-savings").val("Recalculate")
       $("#close-savings-results").show()
+      $("#savings-placeholder").hide()
       $("#savings-results").fadeIn()
 
 pmt = (p, r, t) ->

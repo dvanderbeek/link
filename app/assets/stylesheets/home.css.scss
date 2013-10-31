@@ -408,3 +408,7 @@ a {
   @include border-top-radius(0px);
   @include border-bottom-radius(0px);
 }
+
+#savings-placeholder {
+  margin: 40px 0 0 40px;
+}
