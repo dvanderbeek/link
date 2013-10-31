@@ -1,5 +1,4 @@
 Linkcapital::Application.routes.draw do
-  
   %w[students investors organizations apply].each do |path|
     get path, to: "home##{path}", as: path
   end

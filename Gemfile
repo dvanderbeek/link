@@ -30,6 +30,7 @@ gem "letter_opener", :group => :development
 gem 'uservoice-ruby'
 gem "figaro"
 gem "private_pub"
+gem "thin"
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

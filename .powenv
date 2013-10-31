@@ -1,11 +1,11 @@
-export PATH ; PATH="/Users/earlynovrock/.rvm/gems/ruby-1.9.3-p362@my_new_gemset/bin:/Users/earlynovrock/.rvm/gems/ruby-1.9.3-p362@global/bin:/Users/earlynovrock/.rvm/rubies/ruby-1.9.3-p362/bin:/Users/earlynovrock/.rvm/bin:$PATH"
-export rvm_env_string ; rvm_env_string='ruby-1.9.3-p362@my_new_gemset'
+export PATH ; PATH="/Users/earlynovrock/.rvm/gems/ruby-1.9.3-p362@linkcapital/bin:/Users/earlynovrock/.rvm/gems/ruby-1.9.3-p362@global/bin:/Users/earlynovrock/.rvm/rubies/ruby-1.9.3-p362/bin:/Users/earlynovrock/.rvm/bin:$PATH"
+export rvm_env_string ; rvm_env_string='ruby-1.9.3-p362@linkcapital'
 export rvm_path ; rvm_path='/Users/earlynovrock/.rvm'
 export rvm_ruby_string ; rvm_ruby_string='ruby-1.9.3-p362'
-export rvm_gemset_name ; rvm_gemset_name='my_new_gemset'
+export rvm_gemset_name ; rvm_gemset_name='linkcapital'
 export RUBY_VERSION ; RUBY_VERSION='ruby-1.9.3-p362'
-export GEM_HOME ; GEM_HOME='/Users/earlynovrock/.rvm/gems/ruby-1.9.3-p362@my_new_gemset'
-export GEM_PATH ; GEM_PATH='/Users/earlynovrock/.rvm/gems/ruby-1.9.3-p362@my_new_gemset:/Users/earlynovrock/.rvm/gems/ruby-1.9.3-p362@global'
+export GEM_HOME ; GEM_HOME='/Users/earlynovrock/.rvm/gems/ruby-1.9.3-p362@linkcapital'
+export GEM_PATH ; GEM_PATH='/Users/earlynovrock/.rvm/gems/ruby-1.9.3-p362@linkcapital:/Users/earlynovrock/.rvm/gems/ruby-1.9.3-p362@global'
 export MY_RUBY_HOME ; MY_RUBY_HOME='/Users/earlynovrock/.rvm/rubies/ruby-1.9.3-p362'
 export IRBRC ; IRBRC='/Users/earlynovrock/.rvm/rubies/ruby-1.9.3-p362/.irbrc'
 unset MAGLEV_HOME
