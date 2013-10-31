@@ -31,6 +31,7 @@ gem 'uservoice-ruby'
 gem "figaro"
 gem "private_pub"
 gem "thin"
+gem 'sucker_punch', '~> 1.0'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
