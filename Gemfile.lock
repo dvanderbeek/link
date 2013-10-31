@@ -48,9 +48,30 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.6.3)
+    cookiejar (0.3.0)
+    em-http-request (1.1.1)
+      addressable (>= 2.3.4)
+      cookiejar
+      em-socksify (>= 0.3)
+      eventmachine (>= 1.0.3)
+      http_parser.rb (>= 0.6.0.beta.2)
+    em-socksify (0.3.0)
+      eventmachine (>= 1.0.0.beta.4)
     erubis (2.7.0)
+    eventmachine (1.0.3)
     execjs (2.0.2)
     ezcrypto (0.7.2)
+    faye (1.0.0)
+      cookiejar (>= 0.3.0)
+      em-http-request (>= 0.3.0)
+      eventmachine (>= 0.12.0)
+      faye-websocket (>= 0.7.0)
+      multi_json (>= 1.0.0)
+      rack (>= 1.0.0)
+      websocket-driver (>= 0.3.0)
+    faye-websocket (0.7.0)
+      eventmachine (>= 0.12.0)
+      websocket-driver (>= 0.3.0)
     figaro (0.7.0)
       bundler (~> 1.0)
       rails (>= 3, < 5)
@@ -62,6 +83,7 @@ GEM
       haml (>= 3.1, < 4.1)
       railties (>= 3.1, < 4.1)
     hike (1.2.3)
+    http_parser.rb (0.6.0.beta.2)
     i18n (0.6.1)
     journey (1.0.4)
     jquery-rails (3.0.4)
@@ -85,6 +107,8 @@ GEM
       activesupport (>= 3.1)
       arel
     polyglot (0.3.3)
+    private_pub (1.0.3)
+      faye
     rack (1.4.5)
     rack-cache (1.2)
       rack (>= 0.4)
@@ -133,6 +157,7 @@ GEM
       ezcrypto (>= 0.7.2)
       json (>= 1.7.5)
       oauth (>= 0.4.7)
+    websocket-driver (0.3.0)
 
 PLATFORMS
   ruby
@@ -148,6 +173,7 @@ DEPENDENCIES
   newrelic_rpm
   pg
   pg_search
+  private_pub
   rails (= 3.2.13)
   sass-rails (~> 3.2.3)
   uglifier (>= 1.0.3)
