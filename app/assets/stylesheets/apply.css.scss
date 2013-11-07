@@ -8,10 +8,11 @@
     text-align: center;
     padding: 50px 20px 70px 20px;
     margin-bottom: 30px;
+    display: block;
     img {
       max-width: 100%;
     }
-    a {
+    .school-apply {
       position: absolute;
       bottom: 0px;
       left: 0px;
@@ -23,10 +24,10 @@
       color: #ffffff;
       border-radius: 0 0 8px 8px;
       text-shadow: 1px 1px 2px #333232;
-      &:hover {
-        text-decoration: none;
-        background: lighten($apply-btn-bg, 5%);
-      }
+    }
+    &:hover .school-apply {
+      text-decoration: none;
+      background: lighten($apply-btn-bg, 5%);
     }
   }
 }

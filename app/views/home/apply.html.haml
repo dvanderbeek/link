@@ -4,36 +4,18 @@
     .col-sm-8#schools-container
       %h6 Participating Schools
       .row#schools
-        .col-md-4.col-sm-6
-          .school
-            = image_tag "schools/hope.png"
-            = link_to "Apply Now", "#", class: "school-apply"
-        .col-md-4.col-sm-6
-          .school
-            = image_tag "schools/michigan.png"
-            = link_to "Apply Now", "#", class: "school-apply"
-        .col-md-4.col-sm-6
-          .school
-            = image_tag "schools/calvin.png"
-            = link_to "Apply Now", "#", class: "school-apply"
-        .col-md-4.col-sm-6
-          .school
-            = image_tag "schools/northwestern.png"
-            = link_to "Apply Now", "#", class: "school-apply"
-        .col-md-4.col-sm-6
-          .school
-            = image_tag "schools/wheaton.png"
-            = link_to "Apply Now", "#", class: "school-apply"
-        .col-md-4.col-sm-6
-          .school
-            = image_tag "schools/university-of-chicago.png"
-            = link_to "Apply Now", "#", class: "school-apply"
+        - %w[hope michigan calvin northwestern wheaton university-of-chicago].each do |school|
+          .col-md-4.col-sm-6
+            %a.school{href: "#"}
+              = image_tag "schools/#{school}.png"
+              .school-apply Apply Now
       %h6 Participating Organizations
       .row#schools
-        .col-md-4.col-sm-6
-          .school
-            = image_tag "organizations/amway.png"
-            = link_to "Apply Now", "#", class: "school-apply"
+        - %w[amway].each do |org|
+          .col-md-4.col-sm-6
+            %a.school{href: "#"}
+              = image_tag "organizations/#{org}.png"
+              .school-apply Apply Now
     .col-sm-4#calculator
       %h6 Estimated Savings Calculator
       = render 'savings_calculator'
