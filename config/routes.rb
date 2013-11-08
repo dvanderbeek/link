@@ -1,5 +1,5 @@
 Linkcapital::Application.routes.draw do
-  %w[students investors organizations apply].each do |path|
+  %w[students investors organizations apply privacy_policy].each do |path|
     get path, to: "home##{path}", as: path
   end
   get :contact, to: 'messages#new', as: :contact

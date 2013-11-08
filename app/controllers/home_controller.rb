@@ -14,6 +14,6 @@ class HomeController < ApplicationController
   def apply
   end
 
-  def email_signature
+  def privacy_policy
   end
 end
