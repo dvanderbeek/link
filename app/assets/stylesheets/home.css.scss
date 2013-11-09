@@ -416,4 +416,6 @@ a {
 .static-page-header {
   height: 365px;
   background: $hero-bg-color url('static-page-header.jpg');
+  background-repeat: no-repeat;
+  background-position-x: center;
 }
