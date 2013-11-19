@@ -11,6 +11,5 @@ class MessageWorker
         :message => (message.content + (message.phone.blank? ? "" : (" Phone: " + message.phone)))
       }
     })['ticket']
-    # PrivatePub.publish_to("/messages/new", "alert('Support ticket received!');")
   end
 end
