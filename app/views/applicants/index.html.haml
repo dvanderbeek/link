@@ -1,0 +1,26 @@
+= render partial: "page_heading", locals: { image: "apply-header.png", title: "Listing Applicants", subtitle: "" }
+
+.container
+  %h4 Applicants
+  %table.table
+    %thead
+      %tr
+        %th Name
+        %th Email
+        %th School
+        %th Balance
+        %th Rate
+        %th Created
+    %tbody
+      - if @applicants.length > 0
+        - @applicants.each do |applicant|
+          %tr
+            %td= applicant.name
+            %td= applicant.email
+            %td= applicant.school
+            %td= number_to_currency applicant.balance
+            %td= number_to_percentage applicant.rate, precision: 1
+            %td= applicant.created_at.strftime("%m-%d-%Y")
+      - else
+        %tr
+          %td{colspan: 5} No Applicants

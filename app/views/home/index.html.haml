@@ -3,7 +3,7 @@
     .row
       .col-md-12
         #hero-title
-          %h2 Leverage your network
+          %h2 Connect with investors
           %h1 Save on STUDENT LOANS
 .container
   .row
@@ -11,28 +11,40 @@
       .one-third.pull-left.relative
         .h5.bg-green
         .h290.pad.bl.bb.bg-white
-          %h6 Students & Recent Grads
+          %h6 Borrowers
           %p
             = image_tag "money.png", class: "pull-right ml-10 mr-neg-17"
-            Lower your student loan costs by refinancing with the help of investors from your school or organization.
+            Refinance and save with Link's 5.75% fixed interest consolidation loan.
           .absolute.pos-b-30
             = link_to "Learn More", students_path, class: "btn btn-primary"
             = link_to "Apply Now", apply_path, class: "btn btn-success"
       .one-third.pull-left.relative
         .h5.bg-light-blue
         .h290.pad.bl.br.bb.bg-white
-          %h6 Organizations
-          %p
-            = image_tag "building.png", class: "pull-right ml-10 mb-neg-20"
-            Attract and retain young talent through a corporate benefit program that saves employees money and generates profit for your organization.
-          .absolute.pos-b-30
-            = link_to "Learn More", organizations_path, class: "btn btn-primary"
-      .one-third.pull-left.relative
-        .h5.bg-dark-blue
-        .h290.pad.br.bb.bg-white
           %h6 Investors
           %p
             = image_tag "chart.png", class: "pull-right ml-10 mr-neg-17"
-            Earn healthy financial returns while helping lower education costs for junior members of your network.
+            Earn healthy, risk-adjusted returns.  Help lower the cost of education for qualified borrowers.
           .absolute.pos-b-30
             = link_to "Learn More", investors_path, class: "btn btn-primary"
+      .one-third.pull-left.relative
+        .h5.bg-dark-blue
+        .h290.pad.br.bb.bg-white
+          %h6 Calculate Your Savings
+          %p See how much you could save by refinancing with Link.
+          = form_tag "#", id: "savings-calculator" do
+            .savings-calc-loan
+              .form-group
+                = text_field_tag :loan_balance, "", class: "form-control currency balance", placeholder: "Enter your loan balance"
+              .form-group
+                = text_field_tag :loan_rate, "", class: "form-control percent rate", placeholder: "Enter your interest rate"
+            .absolute.pos-b-30
+              / = link_to "Launch Calculator!", '#', class: "btn btn-success", data: { toggle: "modal", target: "#savings-modal" }
+              = submit_tag "Calculate Savings!", class: "btn btn-success", id: "calculate-savings"
+  .br.bl.bg-white{style: "margin-right: 1px;"}
+    #savings-results.pad.center{style: "display: none;"}
+      %h6 Your Estimated Savings With Link
+      .savings#savings-ten.currency Enter some details!
+      / = link_to_add_fields "Add a Loan"
+      / %br/
+      = render "home/savings_details"

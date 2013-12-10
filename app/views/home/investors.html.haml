@@ -1,4 +1,11 @@
-= render partial: "page_heading", locals: { image: "investors-header.png", title: "Investors", subtitle: "Earn a healthy, risk-adjusted return while lowering the cost of education for borrowers from your network." }
+#page-heading
+  .container
+    .row
+      .col-sm-6.hidden-xs
+        #video-thumb{data: { toggle: "modal", target: "#how-it-works" } }
+      .col-sm-6
+        %h3 Investors
+        %h5 Earn a healthy, risk-adjusted return while lowering the cost of education for borrowers from your network.
 .container
   .row
     .col-md-12

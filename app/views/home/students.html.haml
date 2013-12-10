@@ -1,4 +1,11 @@
-= render partial: "page_heading", locals: { image: "students-header.png", title: "Students & Recent Graduates", subtitle: "We link you to investors from your organization or school. They invest to allow you to refinance your student loans at a lower rate, saving you money." }
+#page-heading
+  .container
+    .row
+      .col-sm-6.hidden-xs
+        #video-thumb{data: { toggle: "modal", target: "#how-it-works" } }
+      .col-sm-6
+        %h3 Students & Recent Graduates
+        %h5 Save with Link's 5.75% fixed interest loans.
 .container
   .row
     .col-md-12

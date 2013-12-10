@@ -1,9 +1,11 @@
-.row.savings-calc-loan
-  .col-xs-5
-    = text_field_tag :loan_balance, "", class: "form-control currency balance", placeholder: "Remaining Balance"
-  .col-xs-3
-    = text_field_tag :loan_rate, "", class: "form-control percent rate", placeholder: "Rate"
-  .col-xs-3
-    = text_field_tag :loan_term, "", class: "form-control term", placeholder: "Months Left"
-  .col-xs-1
-    = link_to raw("<i class='glyphicon glyphicon-trash'></i>"), "#", class: "btn btn-default remove-loan"
+.savings-calc-loan
+  .row
+    .col-sm-8
+      .form-group{style: 'margin: 0;'}
+        = label_tag :loan_balance, "Remaining Balance"
+        = text_field_tag :loan_balance, "", class: "form-control currency balance", placeholder: "Balance"
+    .col-sm-4
+      .form-group{style: 'margin: 0;'}
+        = label_tag :loan_rate, "Rate"
+        = text_field_tag :loan_rate, "", class: "form-control percent rate", placeholder: "Rate"
+  = link_to raw("&times;"), "#", class: "remove-loan"

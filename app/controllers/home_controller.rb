@@ -11,7 +11,7 @@ class HomeController < ApplicationController
   def organizations
   end
 
-  def apply
+  def about_us
   end
 
   def privacy_policy

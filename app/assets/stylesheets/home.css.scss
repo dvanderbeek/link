@@ -5,7 +5,9 @@ $header-bg: #474749;
 $hero-bg-color: #2E2D2D;
 
 $features-border: #E6E6E6;
-
+body {
+  background-color: $footer-bg;
+}
 #uvw-dialog-powered-by-uv-1 {
   display: none!important;
 }
@@ -16,7 +18,12 @@ $features-border: #E6E6E6;
   padding-top: 10px!important;
 }
 
-.center { text-align: center; }
+.center { 
+  text-align: center; 
+  .modal {
+    text-align: left;
+  }
+}
 
 h1, h2, h3, h4, h5, h6, h7, p, a {
   font-family: 'Lato', sans-serif;
@@ -54,6 +61,9 @@ h2, h3, h7 {
 h4 {
   font-size: 32px; 
   color: #018EAC;
+  &.modal-title {
+    font-size: 18px;
+  }
 }
 
 h5, h6, h7 {
@@ -87,6 +97,9 @@ a {
 .field-text {
   font-size: 18px;
   color: #666;
+  .a {
+    font-size: 18px;
+  }
 }
 
 .navbar {
@@ -203,8 +216,31 @@ a {
 
 .savings-calc-loan {
   margin-bottom: 10px;
+  position: relative;
   &:first-child .remove-loan {
     display: none;
+  }
+  .form-group.has-error {
+    margin: 0;
+    .help-block {
+      margin: 0;
+    }
+  }
+  .remove-loan {
+    position: absolute;
+    height: 14px;
+    width: 14px;
+    @include border-top-radius(50%);
+    @include border-bottom-radius(50%);
+    line-height: 11px;
+    text-align: center;
+    background: red;
+    border: 1px solid darken(red, 15%);
+    color: #fff;
+    top: 50%;
+    margin-top: 5px;
+    right: -18px;
+    text-decoration: none;
   }
 }
 
@@ -326,6 +362,21 @@ a {
   }
 }
 
+#how-it-works {
+  .modal-dialog {
+    width: 620px;
+  }
+}
+#video-thumb {
+  cursor: pointer;
+  height: 266px;
+  background: url('video-thumb.jpg');
+  background-size: cover;
+  &:hover {
+    background: url('video-thumb-hover.jpg');
+    background-size: cover;
+  }
+}
 
 /**************************** FEATURES ****************************/
 /* Borders */
@@ -337,6 +388,7 @@ a {
 .one-third { width: 33.33333333333%; }
 /* Margin & padding */
 .pad { padding: 17px; }
+.mt-30 { margin-top: 30px; }
 .mt-neg-5 { margin-top: -5px; }
 .ml-10 { margin-left: 10px; }
 .mr-neg-17 { margin-right: -17px; }

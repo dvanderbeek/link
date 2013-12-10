@@ -1,0 +1,11 @@
+= render partial: "page_heading", locals: { image: "apply-header.png", title: "Refinance and Save", subtitle: "Interested in saving with a Link loan?  Fill in the information fields below to start the application process.  A Link representative will contact you shortly thereafter to discuss your custom savings options." }
+.container
+  .row{style: "margin: 30px 0;"}
+    .col-sm-8#schools-container
+      %h4{style: "margin-bottom: 20px;"} Apply Now
+      #form
+        = render 'form'
+    .col-sm-4#calculator
+      %h6 Estimated Savings Calculator
+      = render 'home/savings_calculator'
+      = render 'home/savings_results'

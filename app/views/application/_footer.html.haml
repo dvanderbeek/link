@@ -2,34 +2,27 @@
   .container
     .row
       .col-sm-8.col-md-6
-        .media
-          = image_tag "donut-chart.png", class: "media-object pull-left"
-          .media-body
-            %h7 We're passionate about giving back
-            That's why we match donations of up to 20% of our profits to support financial literacy and access to education for the less fortunate.
-      .col-md-2
-      .col-sm-4.col-md-4
+        %p{style: "margin-top: 6px;"}
+          &copy; Copyright 
+          = Time.zone.now.year
+          Link Capital
+      .col-sm-4.col-md-6
         .row
-          .col-md-6
+          .col-md-4
+            %p
+              .title Legal
+              = link_to "Terms of Use"
+              %br/
+              = link_to "Privacy Policy", privacy_policy_path
+          .col-md-4
             %p
               .title FAQ
               Have a question? 
               %br/
               = link_to "Find the answer", faqs_url
-          .col-md-6
+          .col-md-4
             %p 
               .title Link Capital
               (312) 226-6700
               %br/
               = link_to "info@linkcapital.com", "mailto:info@linkcapital.com"
-    %hr
-    .row.copyright
-      .col-xs-6
-        &copy; Copyright 
-        = Time.zone.now.year
-        Link Capital
-      .col-xs-6
-        .pull-right
-          = link_to "Terms of Use"
-          |
-          = link_to "Privacy Policy", privacy_policy_path

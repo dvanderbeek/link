@@ -16,3 +16,15 @@
             %li 5.97% APR
       .modal-footer
         %button.btn.btn-default{"data-dismiss" => "modal", type: "button"} Close
+
+/ = link_to "Details", "#", data: { toggle: "collapse", target: "#details-panel" }, onclick: "event.preventDefault();"
+/ #details-panel.collapse{style: "text-align: left;"}
+/   %h6.modal-title.mt-30.center Savings Details
+/   %p
+/     We calculate your savings by comparing what you would pay if you refinanced your existing loans at their current interest rate with a 10 year term versus what you would pay on a Link loan with the following terms:
+/     %br
+/     %ul
+/       %li 10 Year Term
+/       %li 5.75% Interest Rate
+/       %li 1% Origination Fee
+/       %li 5.97% APR
