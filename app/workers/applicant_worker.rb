@@ -8,7 +8,7 @@ class ApplicantWorker
       Email: #{applicant.email} \r\n
       School: #{applicant.school} \r\n
       Balance: #{number_to_currency applicant.balance} \r\n
-      Rate: #{number_to_percentage applicant.rate} \r\n
+      Rate: #{number_to_percentage applicant.rate, precision: 2} \r\n
       Referred By: #{applicant.referred_by.nil? ? 'N/A' : applicant.referred_by}
     EOF
 
