@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131209211338) do
+ActiveRecord::Schema.define(:version => 20131212154656) do
 
   create_table "applicants", :force => true do |t|
     t.string   "name"
@@ -19,8 +19,9 @@ ActiveRecord::Schema.define(:version => 20131209211338) do
     t.string   "school"
     t.decimal  "balance"
     t.decimal  "rate"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+    t.string   "referred_by"
   end
 
 end
