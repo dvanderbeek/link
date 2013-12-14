@@ -1,8 +1,8 @@
 = render partial: "page_heading", locals: { image: "apply-header.png", title: "Listing Applicants", subtitle: "" }
 
 .container
-  %h4 Applicants
-  %table.table
+  %h4.mt-30 Applicants
+  %table.table.table-striped.table-hover
     %thead
       %tr
         %th Name
@@ -23,4 +23,6 @@
             %td= applicant.created_at.strftime("%m-%d-%Y")
       - else
         %tr
-          %td{colspan: 5} No Applicants
+          %td{colspan: 6, style: "padding: 0;"} 
+            .well.center.no-content
+              No Applicants
