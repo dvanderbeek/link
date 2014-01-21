@@ -400,6 +400,11 @@ a {
     background-size: cover;
   }
 }
+@media (max-width:991px) {
+  #video-thumb {
+    height: 204px;
+  }
+}
 
 /**************************** FEATURES ****************************/
 /* Borders */
