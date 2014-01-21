@@ -4,8 +4,13 @@
       .col-sm-6.hidden-xs
         #video-thumb{data: { toggle: "modal", target: "#how-it-works" } }
       .col-sm-6
-        %h3 Students & Recent Graduates
-        %h5 Save with Link's 5.75% fixed interest loans.
+        %h3 Refinance and Save
+        %h5 If you have an above-average credit score and steady income, you’re probably paying too much on your student loans. Link offers a number of loan options to reduce your total loan cost and/or monthly payment.
+        %ul
+          %li #{link_to 'Click here', '#fixed-modal', data: { toggle: 'modal' } } for details on Link’s 5.99% APR fixed rate loan
+          %li #{link_to 'Click here', '#variable-modal', data: { toggle: 'modal' } }  for details on Link’s variable rate loan with APR as low as 2.99%
+          %li Use our #{link_to 'loan calculator', '#savings-calculator'} to see your potential savings for each option
+
 .container
   .row
     .col-md-12
@@ -19,13 +24,13 @@
               = image_tag "students1xs.png", class: "visible-xs"
             .col-sm-6
               %p#students-1
-                %strong.field-title Federal student loans do not account for a borrower’s ability to repay the loan. 
-                %span.field-text Students who are likely to repay their loan are charged the same interest rate as students who are extremely unlikely to ever repay.
+                %strong.field-title The federal government extends student loans to nearly 10 million individuals a year.
+                %span.field-text Unlike a mortgage or auto loan, the government does not account for a borrower’s ability to repay their loan, issuing loans to high-risk borrowers at the same interest rate as loans issued to low-risk borrowers.  Link thinks this approach is unfair.
           .row.description
             .col-sm-6
               %p#students-2
-                %strong.field-title We think this approach is unfair, 
-                %span.field-text and we help students who are likely to repay save money by refinancing their loans at a lower interest rate.
+                %strong.field-title Link qualifies a borrower’s likelihood to repay by verifying factors such as credit score, employment, annual income and college GPA.
+                %span.field-text If these factors suggest a borrower is low-risk, Link can offer the borrower a loan with a competitive interest rate.
             .col-sm-6
               = image_tag "students2.png", class: "hidden-xs"
               = image_tag "students2xs.png", class: "visible-xs"
@@ -35,16 +40,50 @@
               = image_tag "students3xs.png", class: "visible-xs"
             .col-sm-6
               %p#students-3
-                %strong.field-title We pay for these refinanced loans with investment from investors in your organization or school’s alumni group. 
-                %span.field-text Your interest payments on your new refinanced loan become return on their investment, enabling investors to make money while helping you save.
+                %strong.field-title Link finances these qualified loans with the help of private investors and other banking partners.
+                %span.field-text The interest payments on these loans are directed back to the investors, enabling them to earn competitive financial returns while also helping borrowers save.
           %hr
           .row
             .col-md-6
+              %a{name: "savings-calculator"}
               %h4{style: "margin-top: 30px;"} Estimated Savings Calculator
               = render 'savings_calculator'
             .col-md-6
               = image_tag "savings-placeholder.png", id: "savings-placeholder"
               = render 'savings_results'
+
+
+#fixed-modal.modal.fade{"aria-hidden" => "true", role: "dialog", tabindex: "-1"}
+  .modal-dialog
+    .modal-content
+      .modal-header
+        %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", type: "button"} ×
+        %h6.modal-title Fixed Rate Loan Details
+      .modal-body
+        %p 5.75% interest rate
+        %p 1% origination fee added to total loan balance
+        %p 5.97% APR
+        %p $10,000 loan minimum
+        %p Loan available in 3, 5, 7, 10, 15, 20 or 30 year terms.  Shorter loan terms will maximize total loan savings, longer terms will minimize monthly payment.
+        %p Link does not recommend this loan if you are eligible for the U.S. Governments income based repayment plan or Public Service Loan Forgiveness program.  More details here (Link to FAQ)
+
+#variable-modal.modal.fade{"aria-hidden" => "true", role: "dialog", tabindex: "-1"}
+  .modal-dialog
+    .modal-content
+      .modal-header
+        %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", type: "button"} ×
+        %h6.modal-title Variable Rate Loan Details
+      .modal-body
+        %p 2.99 – 4.99% interest rate
+        %p 1% origination fee added to total loan balance
+        %p 3.25 – 5.25% APR
+        %p $10,000 loan minimum 
+        %p Loan available in 5 or 10 year terms.  
+        %p Loan Interest rate set at LIBOR rate + 2.75% and adjusts monthly with maximum interest rate of 8.0%.  As with any variable rate loan, there is risk of interest rates rising higher than the rate at time of loan origination.
+        %p Link does not recommend this loan if you are eligible for the U.S. Governments income based repayment plan or Public Service Loan Forgiveness program.  More details here (Link to FAQ)
+
+      .modal-footer
+        %button.btn.btn-default{"data-dismiss" => "modal", type: "button"} Close
   /       %p{style: "margin-bottom: 30px;"}
   /         %span.field-text Want to know how much you could save by refinancing with Link? Find out below!
   /       .row

@@ -3,7 +3,7 @@
     .row
       .col-md-12
         #hero-title
-          %h2 Connect with investors
+          %h2 A smarter way to
           %h1 Save on STUDENT LOANS
 .container
   .row
@@ -14,22 +14,18 @@
           %h6 Borrowers
           %p
             = image_tag "money.png", class: "pull-right ml-10 mr-neg-17"
-            Refinance and save with Link's 5.75% fixed interest consolidation loan.
+            REFINANCE AND SAVE WITH LINK.
+            %ul{style: "padding-left: 15px; font-size: 13px;"}
+              %li Fixed rate loans with 5.97% APR
+              %li Variable rate loans with APR as low as 2.99%
+              %li 3 to 30 year term options.  Choose the one that's right for you
+
           .absolute.pos-b-30
             = link_to "Learn More", students_path, class: "btn btn-primary"
             = link_to "Apply Now", apply_path, class: "btn btn-success"
       .one-third.pull-left.relative
         .h5.bg-light-blue
         .h290.pad.bl.br.bb.bg-white
-          %h6 Investors
-          %p
-            = image_tag "chart.png", class: "pull-right ml-10 mr-neg-17"
-            Earn healthy, risk-adjusted returns.  Help lower the cost of education for qualified borrowers.
-          .absolute.pos-b-30
-            = link_to "Learn More", investors_path, class: "btn btn-primary"
-      .one-third.pull-left.relative
-        .h5.bg-dark-blue
-        .h290.pad.br.bb.bg-white
           %h6 Calculate Your Savings
           %p See how much you could save by refinancing with Link.
           = form_tag "#", id: "savings-calculator" do
@@ -41,6 +37,15 @@
             .absolute.pos-b-30
               / = link_to "Launch Calculator!", '#', class: "btn btn-success", data: { toggle: "modal", target: "#savings-modal" }
               = submit_tag "Calculate Savings!", class: "btn btn-success", id: "calculate-savings"
+      .one-third.pull-left.relative
+        .h5.bg-dark-blue
+        .h290.pad.br.bb.bg-white
+          %h6 Investors
+          %p
+            = image_tag "chart.png", class: "pull-right ml-10 mr-neg-17"
+            A link investment not only lowers the cost of education for qualified borrowers, it can deliver risk-adjusted returns competitive to other fixed income alternatives.
+          .absolute.pos-b-30
+            = link_to "Learn More", investors_path, class: "btn btn-primary"
   .br.bl.bg-white{style: "margin-right: 1px;"}
     #savings-results.pad.center{style: "display: none;"}
       %h6 Your Estimated Savings With Link

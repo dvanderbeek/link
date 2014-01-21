@@ -14,8 +14,9 @@
         / = nav_link "Organizations", organizations_url, "home", "organizations"
         = nav_link "Investors", investors_url, "home", "investors"
         = nav_link "About Us", about_us_url, "home", "about_us"
-        = nav_link "Contact Us", contact_url, "messages", "new"
+        = nav_link "Contact", contact_url, "messages", "new"
         / = nav_link "Log In", "#", "sessions", "new"
+        %li{style: "margin: 0 10px;"}= link_to "Log In", "#", class: "btn btn-success navbar-btn", id: "login-btn"
         %li{style: "margin: 0 10px;"}= link_to "Apply Now", new_applicant_path, class: "btn btn-success navbar-btn", id: "apply-btn"
 
 = render 'how_it_works'
