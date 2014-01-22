@@ -1,9 +1,13 @@
 .savings-calc-loan
   .row
-    .col-sm-8
+    .col-sm-4
       .form-group{style: 'margin: 0;'}
-        = label_tag :loan_balance, "Remaining Balance"
+        = label_tag :loan_balance, "Balance"
         = text_field_tag :loan_balance, "", class: "form-control currency balance", placeholder: "Balance"
+    .col-sm-4
+      .form-group{style: 'margin: 0;'}
+        = label_tag :loan_balance, "Remaining Term"
+        = text_field_tag :loan_term, "", class: "form-control term", placeholder: "Months"
     .col-sm-4
       .form-group{style: 'margin: 0;'}
         = label_tag :loan_rate, "Rate"

@@ -1,9 +1,8 @@
-= link_to "Fixed Details", "#fixed-rate-savings-details", data: { toggle: "modal" }
-%br
-= link_to "Variable Details", "#variable-rate-savings-details", data: { toggle: "modal" }
+= link_to "Details", "#fixed-rate-savings-details", data: { toggle: "modal" }, style: "display: none;", id: "fixed-details-link"
+= link_to "Details", "#variable-rate-savings-details", data: { toggle: "modal" }, style: "display: none;", id: "variable-details-link"
 
 #fixed-rate-savings-details.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", role: "dialog", tabindex: "-1"}
-  .modal-dialog{style: "width: 700px;"}
+  .modal-dialog{style: "width: 960px;"}
     .modal-content
       .modal-header
         %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", type: "button"} ×
@@ -33,8 +32,6 @@
               - fixed_terms.each do |years|
                 %td{class: "fixed-#{years}-savings currency"} $xxxxxx
         %p Note: Calculations assume all timely monthly payments, no grace period, no deferment, or any other disruption to regularly scheduled payments. APR includes 5.75% fixed interest rate + 1% loan origination fee.
-      .modal-footer
-        %button.btn.btn-default{"data-dismiss" => "modal", type: "button"} Close
 
 #variable-rate-savings-details.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", role: "dialog", tabindex: "-1"}
   .modal-dialog{style: "width: 700px;"}
@@ -69,5 +66,3 @@
                 %td{class: "variable-#{years}-savings currency"} $xxxxxx
         %p * Please note, the interest on Link variable rate loans is based on the LIBOR rate + 2.75% APR.  Link's variable rate is reset monthly with an interest rate cap of 8%.
         %p Note: Calculations assume all timely monthly payments, no grace period, no deferment, or any other disruption to regularly scheduled payments.  APR includes 2.75% variable interest rate + 1% loan origination fee.
-      .modal-footer
-        %button.btn.btn-default{"data-dismiss" => "modal", type: "button"} Close

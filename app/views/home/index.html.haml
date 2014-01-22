@@ -31,12 +31,23 @@
           = form_tag "#", id: "savings-calculator" do
             .savings-calc-loan
               .form-group
-                = text_field_tag :loan_balance, "", class: "form-control currency balance", placeholder: "Enter your loan balance"
-              .form-group
-                = text_field_tag :loan_rate, "", class: "form-control percent rate", placeholder: "Enter your interest rate"
+                = text_field_tag :loan_balance, "", class: "form-control currency balance", placeholder: "Remaining balance"
+              .row
+                .col-xs-6
+                  .form-group
+                    = text_field_tag :loan_rate, "", class: "form-control percent rate", placeholder: "Interest rate"
+                .col-xs-6
+                  .form-group
+                    = text_field_tag :loan_term, "", class: "form-control term", placeholder: "Months left"
             .absolute.pos-b-30
-              / = link_to "Launch Calculator!", '#', class: "btn btn-success", data: { toggle: "modal", target: "#savings-modal" }
-              = submit_tag "Calculate Savings!", class: "btn btn-success", id: "calculate-savings"
+              .btn-group
+                %button.btn.btn-success.dropdown-toggle{"data-toggle" => "dropdown", type: "button"}
+                  %span#calculate-savings Calculate
+                  %span.caret
+                %ul.dropdown-menu{role: "menu"}
+                  %li= link_to "Calculate With a Fixed Rate Loan", "#", class: "calculate-savings", data: { type: "fixed" }
+                  %li= link_to "Calculate With a Variable Rate Loan", "#", class: "calculate-savings", data: { type: "variable" }
+              / = submit_tag "Calculate Savings!", class: "btn btn-success calculate-savings", data: { type: "fixed" }
       .one-third.pull-left.relative
         .h5.bg-dark-blue
         .h290.pad.br.bb.bg-white
@@ -49,7 +60,6 @@
   .br.bl.bg-white{style: "margin-right: 1px;"}
     #savings-results.pad.center{style: "display: none;"}
       %h6 Your Estimated Savings With Link
-      .savings#savings-ten.currency Enter some details!
-      / = link_to_add_fields "Add a Loan"
-      / %br/
+      #fixed-savings.savings.fixed-3-savings.currency Enter some details!
+      #variable-savings.savings.variable-5-savings.currency Enter some details!
       = render "home/savings_details"
