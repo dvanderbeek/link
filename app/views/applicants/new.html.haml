@@ -9,17 +9,29 @@
           Here are a few tips to help with your applicaiton process:
         %ul
           %li On average, the entire application takes 20 minutes to complete.  Please give yourself enough time.
-          %li The application will require information regarding your annual income and current employment.  Please have the following materials handy {materials list}
+          %li 
+            The application will require information regarding your annual income and current employment.  Please have
+            %span{style: "color: red;"} {materials list}
+            handy.
           %li At the end of your application you will be presented with a 3-4 loan options, differing on their fixed or variable interest rate and loan term.  Read the detailed loan information below and use the loan calculator to determine which option is best for you.
-          %li Click apply to start the application process.
+          = link_to "Get Started", "#", class: "btn btn-large btn-success", style: "margin-top: 20px; text-decoration: none;"
 
 .container
-  .row{style: "margin: 30px 0;"}
-    .col-sm-8#schools-container
-      %h4{style: "margin-bottom: 20px;"} Apply Now
-      #form
-        = render 'form'
-    .col-sm-4#calculator
-      %h6 Estimated Savings Calculator
-      = render 'home/savings_calculator'
-      = render 'home/savings_results'
+  .mt-neg-5.bg-white
+    .stripe.bg-green.h5
+    .pad
+      .row
+        .col-sm-6
+          %h4{style: 'margin-bottom: 30px;'} Fixed Rate Loans
+          = render "home/fixed_rate_details"
+        .col-sm-6
+          %h4{style: 'margin-bottom: 30px;'} Variable Rate Loans
+          = render 'home/variable_rate_details'
+      %hr
+      .row
+        .col-md-6#calculator
+          %h4 Estimated Savings Calculator
+          = render 'home/savings_calculator'
+        .col-md-6
+          = image_tag "savings-placeholder.png", id: "savings-placeholder"
+          = render 'home/savings_results'

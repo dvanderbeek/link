@@ -60,12 +60,7 @@
         %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", type: "button"} ×
         %h6.modal-title Fixed Rate Loan Details
       .modal-body
-        %p 5.75% interest rate
-        %p 1% origination fee added to total loan balance
-        %p 5.97% APR
-        %p $10,000 loan minimum
-        %p Loan available in 3, 5, 7, 10, 15, 20 or 30 year terms.  Shorter loan terms will maximize total loan savings, longer terms will minimize monthly payment.
-        %p Link does not recommend this loan if you are eligible for the U.S. Government's Income-Based Repayment plan or Public Service Loan Forgiveness program.  More details #{link_to 'here', faqs_path}
+        = render "home/fixed_rate_details"
 
 #variable-modal.modal.fade{"aria-hidden" => "true", role: "dialog", tabindex: "-1"}
   .modal-dialog
@@ -74,13 +69,7 @@
         %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", type: "button"} ×
         %h6.modal-title Variable Rate Loan Details
       .modal-body
-        %p 2.99 – 4.99% interest rate
-        %p 1% origination fee added to total loan balance
-        %p 3.25 – 5.25% APR
-        %p $10,000 loan minimum 
-        %p Loan available in 5 or 10 year terms.  
-        %p Loan interest rate set at LIBOR rate + 2.75% and adjusts monthly with maximum interest rate of 8.0%.  As with any variable rate loan, there is risk of interest rates rising higher than the rate at time of loan origination.
-        %p Link does not recommend this loan if you are eligible for the U.S. Government's Income-Based Repayment plan or Public Service Loan Forgiveness program.  More details #{link_to 'here', faqs_path}
+        = render 'home/variable_rate_details'
 
       .modal-footer
         %button.btn.btn-default{"data-dismiss" => "modal", type: "button"} Close

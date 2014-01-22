@@ -7,8 +7,11 @@
         %h3= "Questions or Comments?"
         %h5 Be sure to check out our #{link_to 'frequently asked questions', faqs_path} or contact us at 312.226.6700 or by completing the form below
 .container
-  .row{style: "padding: 20px 0;"}
-    .col-md-12
-      %h6 Tell Us About Yourself
-      #form
-        = render 'form'
+  .mt-neg-5.bg-white
+    .stripe.bg-green.h5
+    .pad
+      .row
+        .col-md-12
+          %h6 Tell Us About Yourself
+          #form
+            = render 'form'

@@ -1,30 +1,73 @@
-= link_to "Details", "#myModal", data: { toggle: "modal" }
-#myModal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", role: "dialog", tabindex: "-1"}
-  .modal-dialog
+= link_to "Fixed Details", "#fixed-rate-savings-details", data: { toggle: "modal" }
+%br
+= link_to "Variable Details", "#variable-rate-savings-details", data: { toggle: "modal" }
+
+#fixed-rate-savings-details.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", role: "dialog", tabindex: "-1"}
+  .modal-dialog{style: "width: 700px;"}
     .modal-content
       .modal-header
         %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", type: "button"} ×
-        %h6.modal-title Savings Details
+        %h4.modal-title 
+          Potential Savings: 
+          %span{class: "fixed-3-savings currency"} $XXX
       .modal-body
-        %p
-          We calculate your savings by comparing what you would pay if you refinanced your existing loans at their current interest rate with a 10 year term versus what you would pay on a Link loan with the following terms:
-          %br
-          %ul
-            %li 10 Year Term
-            %li 5.75% Interest Rate
-            %li 1% Origination Fee
-            %li 5.97% APR
+        %table.table
+          %thead
+            %tr
+              %th
+              %th.center{colspan: fixed_terms.length} Fixed Rate Loan Options
+            %tr
+              %th
+              - fixed_terms.each do |years|
+                %th #{years} Year
+          %tbody
+            %tr
+              %td APR
+              %td.center{colspan: fixed_terms.length} Fixed at 5.97%
+            %tr
+              %td Monthly Payment
+              - fixed_terms.each do |years|
+                %td{class: "fixed-#{years}-pmt currency"} $xxx
+            %tr
+              %td Estimated Savings vs. Current Loan
+              - fixed_terms.each do |years|
+                %td{class: "fixed-#{years}-savings currency"} $xxxxxx
+        %p Note: Calculations assume all timely monthly payments, no grace period, no deferment, or any other disruption to regularly scheduled payments. APR includes 5.75% fixed interest rate + 1% loan origination fee.
       .modal-footer
         %button.btn.btn-default{"data-dismiss" => "modal", type: "button"} Close
 
-/ = link_to "Details", "#", data: { toggle: "collapse", target: "#details-panel" }, onclick: "event.preventDefault();"
-/ #details-panel.collapse{style: "text-align: left;"}
-/   %h6.modal-title.mt-30.center Savings Details
-/   %p
-/     We calculate your savings by comparing what you would pay if you refinanced your existing loans at their current interest rate with a 10 year term versus what you would pay on a Link loan with the following terms:
-/     %br
-/     %ul
-/       %li 10 Year Term
-/       %li 5.75% Interest Rate
-/       %li 1% Origination Fee
-/       %li 5.97% APR
+#variable-rate-savings-details.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", role: "dialog", tabindex: "-1"}
+  .modal-dialog{style: "width: 700px;"}
+    .modal-content
+      .modal-header
+        %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", type: "button"} ×
+        %h4.modal-title 
+          Potential Savings: 
+          %span{class: "variable-5-savings currency"} $XXX
+      .modal-body
+        %table.table
+          %thead
+            %tr
+              %th
+              %th{colspan: variable_terms.length} Variable Rate Loan Options
+            %tr
+              %th
+              - variable_terms.each do |years|
+                %th #{years} Year
+          %tbody
+            %tr
+              %td APR *
+              %td 3%
+              %td 3%
+            %tr
+              %td Monthly Payment
+              - variable_terms.each do |years|
+                %td{class: "variable-#{years}-pmt currency"} $xxx
+            %tr
+              %td Estimated Savings vs. Current Loan
+              - variable_terms.each do |years|
+                %td{class: "variable-#{years}-savings currency"} $xxxxxx
+        %p * Please note, the interest on Link variable rate loans is based on the LIBOR rate + 2.75% APR.  Link's variable rate is reset monthly with an interest rate cap of 8%.
+        %p Note: Calculations assume all timely monthly payments, no grace period, no deferment, or any other disruption to regularly scheduled payments.  APR includes 2.75% variable interest rate + 1% loan origination fee.
+      .modal-footer
+        %button.btn.btn-default{"data-dismiss" => "modal", type: "button"} Close

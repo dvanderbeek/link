@@ -1,15 +1,18 @@
 = render partial: "page_heading", locals: { image: "contact-header.png", title: "The Link Capital Team", subtitle: "" }
 .container
-  .row{style: "padding: 20px 0;"}
-    .col-md-12
-      %h4 The Link Capital Team
-      %p.field-text{style: "padding: 20px 0;"} 
-        Link Capital was established in 2013 by a group of finance and marketing professionals who thought too many students were being over charged on student loans.  Today, Link partners with proven student loan providers Campus Door and University Accounting Services to deliver loans at competitive interest rates, and best in class customer service.  Questions?  Please contact 
-        = link_to "info@linkcapital.com", "mailto:info@linkcapital.com", style: "font-size: 18px;"
-      %h4 Partners
-      .row{style: "padding: 20px 0;"}
-        .col-xs-6
-          = link_to image_tag('uas_logo.JPG', class: "img-thumbnail"), "http://www.uaservice.com", target: "_blank"
-        .col-xs-6
-          = link_to image_tag('campusdoor_logo.png', class: "img-thumbnail"), "http://www.campusdoor.com/", target: "_blank"
-        %div{style: "height: 200px;"}
+  .mt-neg-5.bg-white
+    .stripe.bg-green.h5
+    .pad
+      .row
+        .col-md-12
+          %h4 The Link Capital Team
+          %p.field-text{style: "padding: 20px 0;"} 
+            Link Capital was established in 2013 by a group of finance and marketing professionals who thought too many students were being over charged on student loans.  Today, Link partners with proven student loan providers Campus Door and University Accounting Services to deliver loans at competitive interest rates, and best in class customer service.  Questions?  Please contact 
+            = link_to "info@linkcapital.com", "mailto:info@linkcapital.com", style: "font-size: 18px;"
+          %h4 Partners
+          .row{style: "padding: 20px 0;"}
+            .col-xs-6
+              = link_to image_tag('uas_logo.JPG', class: "img-thumbnail"), "http://www.uaservice.com", target: "_blank"
+            .col-xs-6
+              = link_to image_tag('campusdoor_logo.png', class: "img-thumbnail"), "http://www.campusdoor.com/", target: "_blank"
+            %div{style: "height: 200px;"}
