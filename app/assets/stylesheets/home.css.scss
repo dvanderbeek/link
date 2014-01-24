@@ -147,6 +147,13 @@ a {
   background-color: $header-bg;
 }
 
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+  background-color: #2b2b2b;
+  color: #FFF;
+}
+
+
+
 .navbar-default {
   background-color: $header-bg;
   .navbar-toggle {
@@ -172,6 +179,13 @@ a {
         &:hover {
           color: $brand-success;
         }
+      }
+    }
+    .dropdown-menu > li > a {
+      color: #333;
+      text-shadow: none;
+      &:hover {
+        background: #f1f1f1;
       }
     }
   }

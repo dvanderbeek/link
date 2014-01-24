@@ -1,16 +1,33 @@
-= render partial: "page_heading", locals: { image: "contact-header.png", title: "The Link Capital Team", subtitle: "" }
+= render partial: "page_heading", locals: { image: "contact-header.png", title: "The Link Capital Team", subtitle: "Link Capital was founded in 2013 with purpose to fix the broken student loan market.   Unlike other student loan providers, Link believes that a borrower’s credit quality should be a large factor in determining the interest rate on their loan.  <br><br>This approach enables Link to provide qualified borrowers loan options with extremely competitive interest rates, significantly lowering overall student loan cost and monthly payments." }
 .container
   .mt-neg-5.bg-white
     .stripe.bg-green.h5
     .pad
       .row
         .col-md-12
-          %h4 The Link Capital Team
-          %p.field-text{style: "padding: 20px 0;"} 
-            Link Capital was established in 2013 by a group of finance and marketing professionals who thought too many students were being over charged on student loans.  Today, Link partners with proven student loan providers Campus Door and University Accounting Services to deliver loans at competitive interest rates, and best in class customer service.  Questions?  Please contact 
-            = link_to "info@linkcapital.com", "mailto:info@linkcapital.com", style: "font-size: 18px;"
+          %h4 Leadership Team
+          .row
+            .col-sm-4
+              %h6 Roger H. Gordon
+              %h6{style: "font-size: 15px; margin-top: -5px;"} Managing Partner & Chief Executive Officer
+              %p Roger’s career spans thirty years in the investment banking and capital markets industries with significant achievements across a broad spectrum of activities including investment research and management, portfolio management, alternative investment fund creation and management and business development and capital raising for alternative investment funds. 
+
+              %p Following 4 years as Managing Director in the Fixed Income, Commodities and Currencies (FICC) division of Goldman, Sachs & Co, Roger has been focused on the creation and management of Chicago, Illinois-based alternative investment funds including opportunistic credit funds such as Quarry Point Partners, LLC and Wolf Point Capital Management, LLC.
+            .col-sm-4
+              %h6 Nicholas Gonzales
+              %h6{style: "font-size: 15px; margin-top: -5px;"} Partner & Chief Operating Officer
+              %p Nick brings eight years of experience working in brand management, primarily at Unilever, the second largest consumer product goods company in the world.  Through a number of marketing, consumer insight, and retail focused roles Nick has worked on a variety of brands including Dove, Suave, Ben & Jerry’s Ice Cream, and most recently, AXE.   In his role on Axe, Nick had the pleasure of crafting marketing plans that featured the brand’s first ever Super Bowl commercial, content partnerships with MTV, SyFy, the NCAA, and a strategy for the brand’s social presence across properties such as Facebook, YouTube, Twitter and Instagram.
+            .col-sm-4
+              %h6 Loren Kronemeyer
+              %h6{style: "font-size: 15px; margin-top: -5px;"} Partner & Chief Financial Officer
+              %p Loren has worked in transactional consulting and corporate development for the past nine years.  While in transaction services at KPMG LLP, Loren advised clients in technical accounting matters and financial integration strategy.  In an expanded corporate development role, Loren created growth & financing strategies and also conducted diligence on target acquisitions. 
+
+              %p Loren is a Certified Public Accountant and has over five years of experience with financial modeling, market sizing and evaluation of expansion opportunity.  
+          
           %h4 Partners
-          .row{style: "padding: 20px 0;"}
+          %p.field-text
+            Link partners with a number of student loan industry veterans to provide safe, reliable, and easy to use loan products and services
+          .row
             .col-xs-6
               = link_to image_tag('uas_logo.JPG', class: "img-thumbnail"), "http://www.uaservice.com", target: "_blank"
             .col-xs-6

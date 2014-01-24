@@ -21,8 +21,14 @@
                 %th #{years} Year
           %tbody
             %tr
-              %td APR
-              %td.center{colspan: fixed_terms.length} Fixed at 5.97%
+              %td Estimated APR
+              %td 6.41%
+              %td 6.16%
+              %td 6.05%
+              %td 5.97%
+              %td 5.9%
+              %td 5.87%
+              %td 5.84%
             %tr
               %td Monthly Payment
               - fixed_terms.each do |years|
@@ -31,7 +37,7 @@
               %td Estimated Savings vs. Current Loan
               - fixed_terms.each do |years|
                 %td{class: "fixed-#{years}-savings currency"} $xxxxxx
-        %p Note: Calculations assume all timely monthly payments, no grace period, no deferment, or any other disruption to regularly scheduled payments. APR includes 5.75% fixed interest rate + 1% loan origination fee.
+        %p Note: Calculations assume all timely monthly payments, no grace period, no deferment, or any other disruption to regularly scheduled payments. APR assumes $100,000 initial loan balance, 5.75% fixed interest rate, and 1% loan origination fee.
 
 #variable-rate-savings-details.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", role: "dialog", tabindex: "-1"}
   .modal-dialog{style: "width: 700px;"}
@@ -53,9 +59,9 @@
                 %th #{years} Year
           %tbody
             %tr
-              %td APR *
-              %td 3%
-              %td 3%
+              %td Estimated APR *
+              %td 3.4%
+              %td 3.2%
             %tr
               %td Monthly Payment
               - variable_terms.each do |years|
@@ -65,4 +71,4 @@
               - variable_terms.each do |years|
                 %td{class: "variable-#{years}-savings currency"} $xxxxxx
         %p * Please note, the interest on Link variable rate loans is based on the LIBOR rate + 2.75% APR.  Link's variable rate is reset monthly with an interest rate cap of 8%.
-        %p Note: Calculations assume all timely monthly payments, no grace period, no deferment, or any other disruption to regularly scheduled payments.  APR includes 2.75% variable interest rate + 1% loan origination fee.
+        %p Note: Calculations assume all timely monthly payments, no grace period, no deferment, or any other disruption to regularly scheduled payments.  APR assumes $100,000 initial loan balance, 3% interest rate, and 1% loan origination fee.

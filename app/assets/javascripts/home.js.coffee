@@ -11,6 +11,20 @@ $ ->
   s = document.getElementsByTagName("script")[0]
   s.parentNode.insertBefore uv, s
 
+  $("body").on "click", "#variable-savings-calculator-link", ->
+    if $("a[href='#savings-calculator']").length > 0
+      $("#variable-modal").modal("hide")
+      return true
+    else
+      return true
+
+  $("body").on "click", "#fixed-savings-calculator-link", ->
+    if $("a[href='#savings-calculator']").length > 0
+      $("#fixed-modal").modal("hide")
+      return true
+    else
+      return true
+
 colorNavbar = ->
   scrollTop = $(window).scrollTop()
 

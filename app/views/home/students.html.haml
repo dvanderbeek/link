@@ -2,13 +2,14 @@
   .container
     .row
       .col-sm-6.hidden-xs
-        #video-thumb{data: { toggle: "modal", target: "#how-it-works" } }
+        / #video-thumb{data: { toggle: "modal", target: "#how-it-works" } }
+        = image_tag "students-header.png", style: "max-width: 100%;"
       .col-sm-6
         %h3 Refinance and Save
-        %h5 If you have an above-average credit score and steady income, you’re probably paying too much on your student loans. Link offers a number of loan options to reduce your total loan cost and/or monthly payment.
+        %h5 If you have an above-average credit score and steady income, you’re probably paying too much on your student loans.  Link offers loan options that can lower your overall cost, reduce your monthly payments, and consolidate multiple loans into a single monthly payment.
         %ul
-          %li #{link_to 'Click here', '#fixed-modal', data: { toggle: 'modal' } } for details on Link’s 5.99% APR fixed rate loan
-          %li #{link_to 'Click here', '#variable-modal', data: { toggle: 'modal' } }  for details on Link’s variable rate loan with APR as low as 2.99%
+          %li #{link_to 'Click here', '#fixed-modal', data: { toggle: 'modal' } } for details on Link’s fixed rate loan with APR as low as 5.85%
+          %li #{link_to 'Click here', '#variable-modal', data: { toggle: 'modal' } }  for details on Link’s variable rate loan with APR as low as 3.2%
           %li Use our #{link_to 'savings calculator', '#savings-calculator'} to see your potential savings for each option
 
 .container

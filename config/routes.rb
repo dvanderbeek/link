@@ -3,7 +3,7 @@ Linkcapital::Application.routes.draw do
   get :apply, to: 'applicants#new', as: :new_applicant
   get :apply, to: 'applicants#new', as: :apply
 
-  %w[students investors organizations privacy_policy about_us].each do |path|
+  %w[students investors organizations privacy_policy about_us terms_of_use].each do |path|
     get path, to: "home##{path}", as: path
   end
   get :contact, to: 'messages#new', as: :contact
