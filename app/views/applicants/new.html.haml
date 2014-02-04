@@ -1,28 +1,48 @@
-#page-heading
-  .container
-    .row
-      .col-sm-6.hidden-xs
-        =image_tag "apply-header.png", style: "width: 100%;", data: { toggle: "modal", target: "#how-it-works" }
-      .col-sm-6
-        %h3 Get Ready to Apply
-        %ul
-          %li The application will take approximately 20 minutes to complete
-          %li To determine your repayment ability, and to justify a lower interest rate, we will collect information regarding your income, employment and credit history.  Please have #{link_to "these materials", "#"} on hand.
-          %li At the end of your application we’ll offer you 3-5 loan options, varying on loan term and interest rate.  Be sure to read the information below to determine which option is best for you.
-          %li If you’re approved, you don’t have to worry about your old loans.  Link will pay off the outstanding loan balance with your old loan provider(s).   No extra paperwork, cancellation hassle, or headache for you.
-          = link_to "Get Started", "#", class: "btn btn-large btn-success", style: "margin-top: 20px; text-decoration: none;"
+/ #page-heading
+/   .container
+/     .row
+/       .col-sm-6.hidden-xs
+/         =image_tag "apply-header.png", style: "width: 100%;", data: { toggle: "modal", target: "#how-it-works" }
+/       .col-sm-6
+/         %h3 Get Ready to Apply
+/         %ul
+/           %li The application will take approximately 20 minutes to complete
+/           %li To determine your repayment ability, and to justify a lower interest rate, we will collect information regarding your income, employment and credit history.  Please have #{link_to "these materials", "#"} on hand.
+/           %li At the end of your application we’ll offer you 3-5 loan options, varying on loan term and interest rate.  Be sure to read the information below to determine which option is best for you.
+/           %li If you’re approved, you don’t have to worry about your old loans.  Link will pay off the outstanding loan balance with your old loan provider(s).   No extra paperwork, cancellation hassle, or headache for you.
+/           = link_to "Get Started", "#", class: "btn btn-large btn-success", style: "margin-top: 20px; text-decoration: none;"
 
+/ .container
+/   .mt-neg-5.bg-white
+/     .stripe.bg-green.h5
+/     .pad
+/       .row
+/         .col-sm-6
+/           %h4{style: 'margin-bottom: 30px;'} Fixed Rate Loans
+/           = render "home/fixed_rate_details"
+/         .col-sm-6
+/           %h4{style: 'margin-bottom: 30px;'} Variable Rate Loans
+/           = render 'home/variable_rate_details'
+/       %hr
+/       .row
+/         .col-md-6#calculator
+/           %a{name: "savings-calculator"}
+/           %h4 Estimated Savings Calculator
+/           = render 'home/savings_calculator'
+/         .col-md-6
+/           = image_tag "savings-placeholder.png", id: "savings-placeholder"
+/           = render 'home/savings_results'
+
+= render partial: "page_heading", locals: { image: "apply-header.png", title: "Refinance and Save", subtitle: "Interested in saving with a Link loan?  Fill in the information fields below to start the application process.  A Link representative will contact you shortly thereafter to discuss your custom savings options." }
 .container
   .mt-neg-5.bg-white
     .stripe.bg-green.h5
     .pad
-      .row
-        .col-sm-6
-          %h4{style: 'margin-bottom: 30px;'} Fixed Rate Loans
-          = render "home/fixed_rate_details"
-        .col-sm-6
-          %h4{style: 'margin-bottom: 30px;'} Variable Rate Loans
-          = render 'home/variable_rate_details'
+      .row{style: "margin: 30px 0;"}
+        .col-sm-12#schools-container
+          %h4{style: "margin-bottom: 20px;"} Apply Now
+          #form
+            = render 'form'
       %hr
       .row
         .col-md-6#calculator
