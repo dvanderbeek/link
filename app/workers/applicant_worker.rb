@@ -9,7 +9,7 @@ class ApplicantWorker
       Phone: #{applicant.phone.nil? ? 'N/A' : applicant.phone} \r\n
       School: #{applicant.school.nil? ? 'N/A' : applicant.school} \r\n
       Employer: #{applicant.employer.nil? ? 'N/A' : applicant.employer} \r\n
-      Outstanding Balance: #{applicant.balance.nil? ? 'N/A' : number_to_currency applicant.balance}
+      Outstanding Balance: #{applicant.balance.nil? ? 'N/A' : number_to_currency(applicant.balance)}
     EOF
 
     client = UserVoice::Client.new(ENV['USERVOICE_API_SUBDOMAIN'], ENV['USERVOICE_API_KEY'], ENV['USERVOICE_API_SECRET'], :callback => ENV['USERVOICE_API_CALLBACK'])
