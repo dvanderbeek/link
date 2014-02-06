@@ -8,6 +8,7 @@ Linkcapital::Application.routes.draw do
   end
   get :contact, to: 'messages#new', as: :contact
   resources :messages, only: [:new, :create]
+  resources :employer_contacts, only: [:create]
   resources :faqs,     only: [:index]
   root to: "home#index"
 end

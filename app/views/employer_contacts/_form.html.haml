@@ -1,0 +1,32 @@
+= form_for @employer_contact, remote: true, html: { role: "form" } do |f|
+  .form-group{class: ("has-error" if @employer_contact.errors.messages[:name].present?)}
+    = f.label :name, raw("<abbr title='required'>*</abbr> Full Name"), class: "control-label" if ENV["FORM_LABELS"]
+    = f.text_field :name, class: "form-control", placeholder: "Full Name*"
+    - if @employer_contact.errors.messages[:name].present?
+      %p.help-block= @employer_contact.errors.messages[:name][0]
+  .row
+    .col-md-6
+      .form-group{class: ("has-error" if @employer_contact.errors.messages[:email].present?)}
+        = f.label :email, raw("<abbr title='required'>*</abbr> Email Address"), class: "control-label" if ENV["FORM_LABELS"]
+        = f.email_field :email, class: "form-control", placeholder: "Email Address*"
+        - if @employer_contact.errors.messages[:email].present?
+          %p.help-block= @employer_contact.errors.messages[:email][0]
+    .col-md-6
+      .form-group{class: ("has-error" if @employer_contact.errors.messages[:phone].present?)}
+        = f.label :phone, "Phone Number", class: "control-label" if ENV["FORM_LABELS"]
+        = f.phone_field :phone, class: "form-control", placeholder: "Phone Number"
+        - if @employer_contact.errors.messages[:phone].present?
+          %p.help-block= @employer_contact.errors.messages[:phone][0]
+  .form-group{class: ("has-error" if @employer_contact.errors.messages[:employer].present?)}
+    = f.label :employer, raw("<abbr title='required'>*</abbr> Employer"), class: "control-label" if ENV["FORM_LABELS"]
+    = f.text_field :employer, class: "form-control", placeholder: "Employer*"
+    - if @employer_contact.errors.messages[:employer].present?
+      %p.help-block= @employer_contact.errors.messages[:employer][0]
+  .form-group{class: ("has-error" if @employer_contact.errors.messages[:position].present?)}
+    = f.label :position, raw("<abbr title='required'>*</abbr> Position at Employer"), class: "control-label" if ENV["FORM_LABELS"]
+    = f.text_field :position, class: "form-control", placeholder: "Position at Employer*"
+    - if @employer_contact.errors.messages[:position].present?
+      %p.help-block= @employer_contact.errors.messages[:position][0]
+  %p.help-block.pull-left * Required
+  = f.submit "Submit", class: "btn btn-primary pull-right"
+  .clearfix

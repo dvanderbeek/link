@@ -11,32 +11,29 @@
     - if @applicant.errors.messages[:email].present?
       %p.help-block= @applicant.errors.messages[:email][0]
 
+  .form-group{class: ("has-error" if @applicant.errors.messages[:phone].present?)}
+    = f.label :phone, raw("Phone"), class: "control-label" if ENV["FORM_LABELS"]
+    = f.email_field :phone, class: "form-control", placeholder: "Phone Number"
+    - if @applicant.errors.messages[:phone].present?
+      %p.help-block= @applicant.errors.messages[:phone][0]
+
   .form-group{class: ("has-error" if @applicant.errors.messages[:school].present?)}
-    = f.label :email, raw("<abbr title='required'>*</abbr> School Where Attending/Graduated"), class: "control-label" if ENV["FORM_LABELS"]
-    = f.text_field :school, class: "form-control", placeholder: "School Where Attending/Graduated *"
+    = f.label :school, raw("School Where Attending/Graduated"), class: "control-label" if ENV["FORM_LABELS"]
+    = f.text_field :school, class: "form-control", placeholder: "School Where Attending/Graduated"
     - if @applicant.errors.messages[:school].present?
       %p.help-block= @applicant.errors.messages[:school][0]
 
-  .row 
-    .col-sm-6
-      .form-group{class: ("has-error" if @applicant.errors.messages[:balance].present?)}
-        = f.label :email, raw("<abbr title='required'>*</abbr> Currrent Loan Balance"), class: "control-label" if ENV["FORM_LABELS"]
-        = f.text_field :balance, class: "form-control currency", placeholder: "Currrent Loan Balance *"
-        - if @applicant.errors.messages[:balance].present?
-          %p.help-block= @applicant.errors.messages[:balance][0]
+  .form-group{class: ("has-error" if @applicant.errors.messages[:employer].present?)}
+    = f.label :employer, raw("Current Employer"), class: "control-label" if ENV["FORM_LABELS"]
+    = f.text_field :employer, class: "form-control", placeholder: "Current Employer"
+    - if @applicant.errors.messages[:employer].present?
+      %p.help-block= @applicant.errors.messages[:employer][0]
 
-    .col-sm-6
-      .form-group{class: ("has-error" if @applicant.errors.messages[:rate].present?)}
-        = f.label :email, raw("<abbr title='required'>*</abbr> Current Interest Rate"), class: "control-label" if ENV["FORM_LABELS"]
-        = f.text_field :rate, class: "form-control percent", placeholder: "Current Interest Rate *"
-        - if @applicant.errors.messages[:rate].present?
-          %p.help-block= @applicant.errors.messages[:rate][0]
-
-  .form-group{class: ("has-error" if @applicant.errors.messages[:referred_by].present?)}
-    = f.label :email, raw("Referred By (if applicable)"), class: "control-label" if ENV["FORM_LABELS"]
-    = f.text_field :referred_by, class: "form-control", placeholder: "Referred By (if applicable)"
-    - if @applicant.errors.messages[:referred_by].present?
-      %p.help-block= @applicant.errors.messages[:referred_by][0]
+  .form-group{class: ("has-error" if @applicant.errors.messages[:balance].present?)}
+    = f.label :email, raw("Currrent Outstanding Loan Balance"), class: "control-label" if ENV["FORM_LABELS"]
+    = f.text_field :balance, class: "form-control currency", placeholder: "Currrent Outstanding Loan Balance"
+    - if @applicant.errors.messages[:balance].present?
+      %p.help-block= @applicant.errors.messages[:balance][0]
 
   %p.help-block.pull-left * Required
   = f.submit "Submit", class: "btn btn-primary pull-right"

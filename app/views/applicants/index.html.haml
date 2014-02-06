@@ -7,6 +7,7 @@
       %tr
         %th Name
         %th Email
+        %th Phone
         %th School
         %th Balance
         %th Rate
@@ -17,6 +18,7 @@
           %tr
             %td= applicant.name
             %td= applicant.email
+            %td= applicant.phone
             %td= applicant.school
             %td= number_to_currency applicant.balance
             %td= number_to_percentage applicant.rate, precision: 1

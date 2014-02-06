@@ -9,6 +9,7 @@ class HomeController < ApplicationController
   end
 
   def organizations
+    @employer_contact = EmployerContact.new()
   end
 
   def about_us

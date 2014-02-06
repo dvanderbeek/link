@@ -37,7 +37,16 @@
               %td Estimated Savings vs. Current Loan
               - fixed_terms.each do |years|
                 %td{class: "fixed-#{years}-savings currency"} $xxxxxx
-        %p Note: Calculations assume all timely monthly payments, no grace period, no deferment, or any other disruption to regularly scheduled payments.
+        %p Savings calculations assumes the following:
+        %ul
+          %li 
+            %p Borrower makes all timely monthly payments, no grace period, no deferment or any other disruption to regularly scheduled payments
+          %li 
+            %p Borrower’s credit criteria qualifies for Link’s 5.75% fixed interest rate loan + 1% origination fee
+          %li 
+            %p No pre-payment penalties on borrower’s existing student loans
+        %p.center= link_to "Apply Now", new_applicant_path, class: "btn btn-success"
+
 
 #variable-rate-savings-details.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", role: "dialog", tabindex: "-1"}
   .modal-dialog{style: "width: 700px;"}
@@ -71,4 +80,12 @@
               - variable_terms.each do |years|
                 %td{class: "variable-#{years}-savings currency"} $xxxxxx
         %p * Please note, the interest on Link variable rate loans is based on the LIBOR rate + 2.75% APR.  Link's variable rate is reset monthly with an interest rate cap of 8%.
-        %p Note: Calculations assume all timely monthly payments, no grace period, no deferment, or any other disruption to regularly scheduled payments.
+        %p Savings calculations assumes the following:
+        %ul
+          %li 
+            %p Borrower makes all timely monthly payments, no grace period, no deferment or any other disruption to regularly scheduled payments
+          %li 
+            %p Borrower’s credit criteria qualifies for Link’s 3.00% variable interest rate loan + 1% origination fee
+          %li 
+            %p No pre-payment penalties
+        %p.center= link_to "Apply Now", new_applicant_path, class: "btn btn-success"
