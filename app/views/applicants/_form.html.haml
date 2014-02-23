@@ -13,7 +13,7 @@
 
   .form-group{class: ("has-error" if @applicant.errors.messages[:phone].present?)}
     = f.label :phone, raw("Phone"), class: "control-label" if ENV["FORM_LABELS"]
-    = f.email_field :phone, class: "form-control", placeholder: "Phone Number"
+    = f.text_field :phone, class: "form-control", placeholder: "Phone Number"
     - if @applicant.errors.messages[:phone].present?
       %p.help-block= @applicant.errors.messages[:phone][0]
 
