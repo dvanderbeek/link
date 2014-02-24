@@ -403,6 +403,16 @@ a {
     width: 620px;
   }
 }
+@media (max-width: 767px) {
+  #how-it-works {
+    .modal-dialog {
+      width: 100%;
+    }
+    iframe {
+      width: 100% !important;
+    }
+  }
+}
 #video-thumb {
   cursor: pointer;
   height: 266px;
