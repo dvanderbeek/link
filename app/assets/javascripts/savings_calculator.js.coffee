@@ -5,16 +5,16 @@ $ ->
   applyAutoNumeric()
 
   $('body').on 'click', '.add_fields', (event) ->
+    preventDefaultIE()
     $(this).before($(this).data('fields'))
     applyAutoNumeric()
-    event.preventDefault()
 
   $('body').on 'click', '.remove-loan', (e) ->
-    event.preventDefault()
+    preventDefaultIE()
     $(this).parent().remove()
 
   $(".calculate-savings").click ->
-    event.preventDefault()
+    preventDefaultIE()
     if allValid($(".balance, .rate, .term"))
       $(".savings-calc-loan .form-group").each ->
         clearErrors($(this))
@@ -99,6 +99,12 @@ $ ->
             $(this).parents(".form-group").append("<p class='help-block'>can't be blank</p>")
         else 
           clearErrors($(this).parents(".form-group"))
+
+preventDefaultIE = () ->
+  if event.preventDefault
+    event.preventDefault()
+  else
+    event.returnValue = false
 
 allValid = (fields) ->
   n = 0
