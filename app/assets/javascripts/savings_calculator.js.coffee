@@ -3,6 +3,7 @@ $ ->
     $(this).closest(".savings-calc-loan").remove()
 
   applyAutoNumeric()
+  $('input, textarea').placeholder()
 
   $('body').on 'click', '.add_fields', (event) ->
     preventDefaultIE()
