@@ -14,5 +14,6 @@
 //= require jquery_ujs
 //= require bootstrap
 //= require autoNumeric
+//= require jquery-placeholder
 //= require jquery.listfilter
 //= require_tree .

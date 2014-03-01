@@ -34,6 +34,7 @@ gem "thin"
 gem 'sucker_punch', '~> 1.0'
 gem 'heroku-deflater', :group => :production
 gem "rails_12factor"
+gem 'jquery-placeholder-rails'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

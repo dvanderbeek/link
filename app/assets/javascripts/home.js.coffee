@@ -1,4 +1,6 @@
 $ ->
+  $('input, textarea').placeholder()
+
   $(".flash").delay(3000).fadeOut()
 
   $(window).scroll ->
