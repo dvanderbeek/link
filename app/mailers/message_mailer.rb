@@ -3,7 +3,7 @@ class MessageMailer < ActionMailer::Base
 
   def new_message(message)
     @message = message
-    mail to: "earlynovrock@gmail.com", 
+    mail to: "info@linkcapital.com", 
          subject: "Link Capital Email Address Submission"
   end
 end
