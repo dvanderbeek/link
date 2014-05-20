@@ -8,7 +8,7 @@
         %span.icon-bar
       = link_to image_tag("Link_Full_Logo_Light.png", style: "width: 173px; padding-top: 7px;"), root_url, class: "navbar-brand", style: "padding: 5px 15px;"
     .collapse.navbar-collapse.navbar-ex1-collapse
-      %ul.nav.navbar-nav.navbar-right
-        %li= link_to "How it Works", "#", data: { toggle: "modal", target: "#how-it-works" }
+      %ul.nav.navbar-nav
+        %li= link_to "How it Works", "#", style: "margin-left: 30px;", data: { toggle: "modal", target: "#how-it-works" }
 
 = render 'how_it_works'

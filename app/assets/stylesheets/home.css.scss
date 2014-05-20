@@ -27,7 +27,7 @@ body {
 
 .placeholder { color: #aaa; }
 
-h1, h2, h3, h4, h5, h6, h7, p, a {
+h1, h2, h3, h4, h5, h6, h7, p, a, li {
   font-family: 'Lato', sans-serif;
 }
 
@@ -82,7 +82,7 @@ h6 {
   color: #000;
 }
 
-p, a {
+p, a, li {
   font-weight: 300;
   font-size: 14px;
 }
