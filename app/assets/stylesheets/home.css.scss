@@ -2,11 +2,11 @@
 $apply-btn-bg: $brand-success;
 $navbar-toggle-border: #333;
 $header-bg: #474749;
-$hero-bg-color: #2E2D2D;
+$hero-bg-color: #474749;
 
 $features-border: #E6E6E6;
 body {
-  background-color: $footer-bg;
+  background-color: $header-bg;
 }
 #uvw-dialog-powered-by-uv-1 {
   display: none!important;
@@ -261,21 +261,34 @@ a {
 }
 
 #hero-background {
-  background: $hero-bg-color url('hero-bg.jpg') center;
+  background: #2E2C2D url('hero-bg.jpg') center;
   background-repeat: no-repeat;
   height: 540px;
   border-bottom: 5px solid #353E47;
   margin-bottom: -5px;
+  margin-top: 80px;
 } 
+
+#hero-bg-responsive {
+  margin-top: 80px;
+  background: #2E2C2D;
+}
+#hero-inner {
+  margin: 0 10%;
+}
 
 #hero-title {
   h1 { font-size: 43px; }
 }
 
 @media (max-width: 991px) { 
+  #hero-bg-responsive {
+    margin-top: 0;
+  }
   #hero-background {
-    height: 419px;
-    background: $hero-bg-color url('hero-bg-768.jpg') center;
+    height: 540px;
+    margin-top: 0;
+    background: #2E2C2D url('hero-bg.jpg') center;
   }
   #hero-title {
     h2 {
@@ -289,9 +302,13 @@ a {
 }
 
 @media (max-width: 767px) { 
+  #hero-bg-responsive {
+    margin-top: 0;
+  }
   #hero-background {
     height: 419px;
-    background: $hero-bg-color url('hero-bg-320.jpg') center;
+    background: #2E2C2D url('hero-bg-320.jpg') center;
+    margin-top: 0;
   }
   #hero-title {
     h2 {

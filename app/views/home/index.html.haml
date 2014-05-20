@@ -1,10 +1,7 @@
-%div#hero-background
-  .container
-    .row
-      .col-md-12
-        #hero-title
-          %h2 A smarter way to
-          %h1 Save on STUDENT LOANS
+#hero-bg-responsive
+  #hero-inner
+    = image_tag "hero-bg.jpg", class: "img-responsive"
+
 .container
   .row
     .col-xs-12
@@ -14,47 +11,28 @@
           %h6 Borrowers
           %p
             = image_tag "money.png", class: "pull-right ml-10 mr-neg-17"
-            Refinance and Save with Link
+            Refinance and Save with Link if you are...
             %ul{style: "padding-left: 15px; font-size: 13px;"}
-              %li Fixed rate loans with APR as low 5.85%
-              %li Variable rate loans with initial APR of 3.2%
-              %li 3 to 30 year term options.  Choose the one that's right for you
+              %li A resident or recent graduate working in a health profession
+              %li Taking advantage of federal loans to finance your education
+              %li Interested in a new way to consolidate and reduce your loans, designed for professionals like you
 
-          .absolute.pos-b-30
-            = link_to "Learn More", students_path, class: "btn btn-primary"
-            = link_to "Apply Now", apply_path, class: "btn btn-success"
       .one-third.pull-left.relative
         .h5.bg-light-blue
         .h290.pad.bl.br.bb.bg-white
-          %h6 Calculate Your Savings
-          %p See how much you could save by refinancing with Link.
-          = form_tag "#", id: "savings-calculator" do
-            .savings-calc-loan
+          %h6 Contact Us
+          %p Thank you for visiting Link Capital's pre-launch website, we appreciate your interest. For more information, enter your email address below.
+          #form
+            = form_for Message.new do |f|
               .form-group
-                = text_field_tag :loan_balance, "", class: "form-control currency balance", placeholder: "Remaining balance on current loan"
-              .row
-                .col-xs-6
-                  .form-group
-                    = text_field_tag :loan_rate, "", class: "form-control percent rate", placeholder: "Interest rate"
-                .col-xs-6
-                  .form-group
-                    = text_field_tag :loan_term, "", class: "form-control term", placeholder: "Months left"
-            .absolute.pos-b-30
-              .btn-group
-                %button.btn.btn-success.dropdown-toggle{"data-toggle" => "dropdown", type: "button"}
-                  %span#calculate-savings Calculate
-                  %span.caret
-                %ul.dropdown-menu{role: "menu"}
-                  %li= link_to "Calculate With a Fixed Rate Loan", "#", class: "calculate-savings", data: { type: "fixed" }
-                  %li= link_to "Calculate With a Variable Rate Loan", "#", class: "calculate-savings", data: { type: "variable" }
+                = f.email_field :email, placeholder: "Email Address", class: "form-control"
+              = f.submit "Submit", class: "btn btn-success"
       .one-third.pull-left.relative
         .h5.bg-dark-blue
         .h290.pad.br.bb.bg-white
-          %h6 Investors
+          %h6 Health Systems
           %p
             = image_tag "chart.png", class: "pull-right ml-10 mr-neg-17"
-            A link investment not only lowers the cost of education for qualified borrowers, it can deliver risk-adjusted returns competitive to other fixed income alternatives.
-          .absolute.pos-b-30
-            = link_to "Learn More", investors_path, class: "btn btn-primary"
+            Link Capital creates custom programs that provide employers a distinct advantage in recruiting and retaining young talent. These programs can provide employee savings equal to the value of a signing or relocation bonus at zero cost to the employer.
   .br.bl.bg-white{style: "margin-right: 1px;"}
     = render "savings_results"
